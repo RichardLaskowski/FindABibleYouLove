@@ -15,9 +15,6 @@
     <Folder Include="Repositories\Bible\" />
     <Folder Include="Repositories\Cover\" />
     <Folder Include="Repositories\Ribbon\" />
-    <Folder Include="Services\Bible\" />
-    <Folder Include="Services\Cover\" />
-    <Folder Include="Services\Ribbon\" />
   </ItemGroup>
 
 </Project>

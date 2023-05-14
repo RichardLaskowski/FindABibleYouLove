@@ -3,5 +3,6 @@
 namespace FindABibleYouLove.Contracts.Cover;
 
 public record CoverColorContract<TType>(
-    TType   CoverColorID,
-    string  ColorName) : SimpleAPIContract<TType>(CoverColorID) where TType : class;
+    TType CoverColorID,
+    string ColorName)
+    : BaseContract<TType>(CoverColorID) where TType : class;

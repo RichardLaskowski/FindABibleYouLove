@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.Cover;
 
-public class CoverDesignEntity<TType> : SimpleEntity<TType> where TType : class
+public class CoverDesignEntity<TType> : BaseEntity<TType> where TType : class
 {
     public TType? CoverDesignID => Id;
     public string DesignName { get; set; } = string.Empty;

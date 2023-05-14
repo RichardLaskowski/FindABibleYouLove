@@ -3,5 +3,6 @@
 namespace FindABibleYouLove.Contracts.Cover;
 
 public record CoverMaterialContract<TType>(
-    TType   CoverMaterialID,
-    string  MaterialName) : SimpleAPIContract<TType>(CoverMaterialID) where TType : class;
+    TType CoverMaterialID,
+    string MaterialName)
+    : BaseContract<TType>(CoverMaterialID) where TType : class;

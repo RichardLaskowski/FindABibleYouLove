@@ -1,6 +1,7 @@
+using API.Endpoints.Bible;
+
 using Microsoft.AspNetCore.Builder;
 
-using WebAPI.Endpoints;
 using WebAPI.Extensions;
 
 namespace API;
@@ -13,7 +14,7 @@ public static class Program
 
         #region Configure Services
 
-        builder.Services.AddEndpointDefinitions(scanMarkers: typeof(CoversEndpoint));
+        builder.Services.AddEndpointDefinitions(scanMarkers: typeof(BibleEndpoint));
 
         #endregion
 

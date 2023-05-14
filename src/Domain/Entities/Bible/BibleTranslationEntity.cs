@@ -2,7 +2,7 @@
 
 namespace Domain.Entities.Bible;
 
-public class BibleTranslationEntity<TType> : SimpleEntity<TType> where TType : class
+public class BibleTranslationEntity<TType> : BaseEntity<TType> where TType : class
 {
     public TType? BibleTranslationID => Id;
     public string TranslationName { get; set; } = string.Empty;

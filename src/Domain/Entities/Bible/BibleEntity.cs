@@ -6,7 +6,7 @@ using Domain.Entities.Ribbon;
 
 namespace Domain.Entities.Bible;
 
-public class BibleEntity<TType> : SimpleEntity<TType> where TType : class
+public class BibleEntity<TType> : BaseEntity<TType> where TType : class
 {
     public TType? BibleID => Id;
     public BibleFormatEntity<TType> Format { get; set; } = new BibleFormatEntity<TType>();
