@@ -2,7 +2,7 @@
 
 namespace Domain.Common.Classes;
 
-public class BaseService<TType, TEntity, TContract> : IService<TType, TContract>
+public abstract class BaseService<TType, TEntity, TContract> : IService<TType, TContract>
     where TType : class
     where TEntity : BaseEntity<TType>
     where TContract : BaseContract<TType>
@@ -16,9 +16,9 @@ public class BaseService<TType, TEntity, TContract> : IService<TType, TContract>
         _mapper = mapper;
     }
 
-    public Task<TContract> CreateAsync(TContract contract) => throw new NotImplementedException();
-    public Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public Task UpdateAsync(TType id, TContract contract) => throw new NotImplementedException();
-    public Task<TContract> GetAsync(TType id) => throw new NotImplementedException();
-    public Task<IEnumerable<TContract>> GetAllAsync() => throw new NotImplementedException();
+    public abstract Task<TContract> CreateAsync(TContract contract);
+    public abstract Task DeleteAsync(TType id);
+    public abstract Task UpdateAsync(TType id, TContract contract);
+    public abstract Task<TContract> GetAsync(TType id);
+    public abstract Task<IEnumerable<TContract>> GetAllAsync();
 }

@@ -18,4 +18,10 @@ public class RibbonColorService<TType> : BaseService<TType, RibbonColorEntity<TT
     {
 
     }
+
+    public override Task<RibbonColorContract<TType>> CreateAsync(RibbonColorContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, RibbonColorContract<TType> contract) => throw new NotImplementedException();
+    public override Task<RibbonColorContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<RibbonColorContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

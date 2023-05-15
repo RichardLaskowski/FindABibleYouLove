@@ -18,4 +18,10 @@ public class CoverService<TType> : BaseService<TType, CoverEntity<TType>, CoverC
     {
 
     }
+
+    public override Task<CoverContract<TType>> CreateAsync(CoverContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, CoverContract<TType> contract) => throw new NotImplementedException();
+    public override Task<CoverContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

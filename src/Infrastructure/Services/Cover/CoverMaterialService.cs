@@ -18,4 +18,10 @@ public class CoverMaterialService<TType> : BaseService<TType, CoverMaterialEntit
     {
 
     }
+
+    public override Task<CoverMaterialContract<TType>> CreateAsync(CoverMaterialContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, CoverMaterialContract<TType> contract) => throw new NotImplementedException();
+    public override Task<CoverMaterialContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverMaterialContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

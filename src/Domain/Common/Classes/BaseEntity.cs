@@ -7,4 +7,10 @@ public abstract class BaseEntity<TType> where TType : class
     internal string? CreatedBy      { get; set; }
     internal DateTime? LastModified { get; set; }
     internal string? LastModifiedBy { get; set; }
+
+    protected BaseEntity() { }
+    protected BaseEntity(TType id) 
+    {
+        Id = id;
+    }
 }

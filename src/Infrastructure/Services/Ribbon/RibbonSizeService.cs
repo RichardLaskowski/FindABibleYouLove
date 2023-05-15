@@ -19,4 +19,10 @@ public class RibbonSizeService<TType> : BaseService<TType, RibbonSizeEntity<TTyp
     {
 
     }
+
+    public override Task<RibbonSizeContract<TType>> CreateAsync(RibbonSizeContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, RibbonSizeContract<TType> contract) => throw new NotImplementedException();
+    public override Task<RibbonSizeContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<RibbonSizeContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

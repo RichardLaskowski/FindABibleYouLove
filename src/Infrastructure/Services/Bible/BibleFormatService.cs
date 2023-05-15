@@ -18,4 +18,10 @@ public class BibleFormatService<TType> : BaseService<TType, BibleFormatEntity<TT
     {
 
     }
+
+    public override Task<BibleFormatContract<TType>> CreateAsync(BibleFormatContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, BibleFormatContract<TType> contract) => throw new NotImplementedException();
+    public override Task<BibleFormatContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleFormatContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

@@ -18,4 +18,10 @@ public class CoverColorService<TType> : BaseService<TType, CoverColorEntity<TTyp
     {
 
     }
+
+    public override Task<CoverColorContract<TType>> CreateAsync(CoverColorContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, CoverColorContract<TType> contract) => throw new NotImplementedException();
+    public override Task<CoverColorContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverColorContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }

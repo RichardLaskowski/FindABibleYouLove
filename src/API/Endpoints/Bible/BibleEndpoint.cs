@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 using Application.Repositories.Bible;
+using Application.Services.Bible;
 
 using Infrastructure.Repositories.Bible;
 
@@ -16,7 +17,7 @@ public class BibleEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBiblesAsync(IBibleRepository<string> repo) => Results.Ok(value: await repo.GetAllAsync());
+    internal async Task<IResult> GetBiblesAsync(IBibleService<string> service) => Results.Ok(value: await service.GetAllAsync());
 
     #endregion
 

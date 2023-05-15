@@ -18,4 +18,10 @@ public class BibleCategoryService<TType> : BaseService<TType, BibleCategoryEntit
     {
 
     }
+
+    public override Task<BibleCategoryContract<TType>> CreateAsync(BibleCategoryContract<TType> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
+    public override Task UpdateAsync(TType id, BibleCategoryContract<TType> contract) => throw new NotImplementedException();
+    public override Task<BibleCategoryContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleCategoryContract<TType>>> GetAllAsync() => throw new NotImplementedException();
 }
