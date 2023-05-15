@@ -17,6 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{3CF0EAAE-99EA-4F34-9152-D35804A19DBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bible-Categories", "Bible-Categories", "{19B7B8E9-26B0-4B70-815B-5910E6BC3BFE}"
+	ProjectSection(SolutionItems) = preProject
+		bible-categories.http = bible-categories.http
+		responses.md = responses.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +61,7 @@ Global
 		{86867B52-1F80-41B6-9704-AD0153941BA9} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
 		{797A529A-7245-461F-B84C-109D57339E02} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
 		{29A342CF-56BC-4A7A-8B35-FB04ECF508B6} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
+		{19B7B8E9-26B0-4B70-815B-5910E6BC3BFE} = {3CF0EAAE-99EA-4F34-9152-D35804A19DBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB6DB385-AF44-4A01-9E07-4BF58C261EED}

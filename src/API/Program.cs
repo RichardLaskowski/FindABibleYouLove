@@ -1,10 +1,7 @@
-using System;
-
 using API.Endpoints.Bible;
 
-using Domain.Entities.Bible;
-
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 using WebAPI.Extensions;
 
@@ -18,6 +15,7 @@ public static class Program
 
         #region Configure Services
 
+        builder.Services.AddInfrastructureServices();
         builder.Services.AddEndpointDefinitions(scanMarkers: typeof(BibleEndpoint));
 
         #endregion

@@ -37,10 +37,7 @@ public class BibleCategoryDictionaryRepository : DictionaryRepository<string, Bi
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleCategoryEntity<string>>> GetAllAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public override async Task<IEnumerable<BibleCategoryEntity<string>>> GetAllAsync() => await Task.Run(() => BibleCategoryDictionary.Values.ToList<BibleCategoryEntity<string>>());
 
     public override Task<BibleCategoryEntity<string>> GetAsync(string id)
     {
@@ -74,7 +71,7 @@ public class BibleCategoryDictionaryRepository : DictionaryRepository<string, Bi
         BibleCategoryEntity<string> JournalingCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Journaling", categoryDescription: string.Empty);
         BibleCategoryEntity<string> ReadersCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Readers", categoryDescription: string.Empty);
         BibleCategoryEntity<string> MinistryCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Ministry", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> ChildrenAndTeensCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "ChildrenAndTeens", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> ChildrenAndTeensCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Children and Teens", categoryDescription: string.Empty);
         BibleCategoryEntity<string> PremiumCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Premium", categoryDescription: string.Empty);
         BibleCategoryEntity<string> DevotionalCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Devotional", categoryDescription: string.Empty);
         BibleCategoryEntity<string> OtherCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Other", categoryDescription: string.Empty);

@@ -21,6 +21,6 @@ public class BibleCategoryService : BaseService<string, BibleCategoryEntity<stri
     public override Task<BibleCategoryContract<string>> CreateAsync(BibleCategoryContract<string> contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, BibleCategoryContract<string> contract) => throw new NotImplementedException();
-    public override Task<BibleCategoryContract<string>> GetAsync(string id) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleCategoryContract<string>>> GetAllAsync() => throw new NotImplementedException();
+    public override async Task<BibleCategoryContract<string>> GetAsync(string id) => await _mapper.MapAsync(await _repo.GetAsync(id));
+    public override async Task<IEnumerable<BibleCategoryContract<string>>> GetAllAsync() => await _mapper.MapAllAsync(await _repo.GetAllAsync());
 }
