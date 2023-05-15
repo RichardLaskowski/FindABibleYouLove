@@ -1,15 +1,13 @@
-﻿using Domain.Common.Classes;
+using Domain.Common.Classes;
 using Domain.Common.Interfaces;
 
 namespace Infrastructure.Repositories;
 
-public abstract class DictionaryRepository<TType, TEntity> : IRepository<TType, TEntity> 
+public abstract class ListRepository<TType, TEntity> : IRepository<TType, TEntity> 
     where TType : class
     where TEntity : BaseEntity<TType> 
 {
-    protected IDictionary<TType, TEntity> Dictionary = new Dictionary<TType, TEntity>();
-
-    protected DictionaryRepository() : base() => Seed();
+    protected IList<TEntity> List = new List<TEntity>();
 
     public abstract TEntity Add(TEntity entity);
     public abstract IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities);
@@ -23,5 +21,4 @@ public abstract class DictionaryRepository<TType, TEntity> : IRepository<TType, 
     public abstract void RemoveRange(IEnumerable<TEntity> entities);
     public abstract void Update(TEntity entity);
     public abstract void UpdateRange(IEnumerable<TEntity> entities);
-    public abstract void Seed();
 }

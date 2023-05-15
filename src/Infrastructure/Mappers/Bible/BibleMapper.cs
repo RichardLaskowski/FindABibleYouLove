@@ -7,14 +7,14 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleMapper<TType> : BaseMapper<TType, BibleEntity<TType>, BibleContract<TType>>, IBibleMapper<TType> where TType : class
+public class BibleMapper : BaseMapper<string, BibleEntity<string>, BibleContract<string>>, IBibleMapper<string> 
 {
-    public override BibleEntity<TType> Map(BibleContract<TType> value) => throw new NotImplementedException();
-    public override BibleContract<TType> Map(BibleEntity<TType> value) => throw new NotImplementedException();
-    public override IEnumerable<BibleEntity<TType>> MapAll(IEnumerable<BibleContract<TType>> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleContract<TType>> MapAll(IEnumerable<BibleEntity<TType>> values) => throw new NotImplementedException();
-    public override Task<BibleEntity<TType>> MapAsync(BibleContract<TType> value) => throw new NotImplementedException();
-    public override Task<BibleContract<TType>> MapAsync(BibleEntity<TType> value) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleEntity<TType>>> MapAllAsync(IEnumerable<BibleContract<TType>> values) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleContract<TType>>> MapAllAsync(IEnumerable<BibleEntity<TType>> values) => throw new NotImplementedException();
+    public override BibleEntity<string> Map(BibleContract<string> value) => throw new NotImplementedException();
+    public override BibleContract<string> Map(BibleEntity<string> value) => throw new NotImplementedException();
+    public override IEnumerable<BibleEntity<string>> MapAll(IEnumerable<BibleContract<string>> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleContract<string>> MapAll(IEnumerable<BibleEntity<string>> values) => throw new NotImplementedException();
+    public override Task<BibleEntity<string>> MapAsync(BibleContract<string> value) => throw new NotImplementedException();
+    public override Task<BibleContract<string>> MapAsync(BibleEntity<string> value) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleEntity<string>>> MapAllAsync(IEnumerable<BibleContract<string>> values) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleContract<string>>> MapAllAsync(IEnumerable<BibleEntity<string>> values) => throw new NotImplementedException();
 }

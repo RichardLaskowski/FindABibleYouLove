@@ -9,19 +9,18 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleCategoryService<TType> : BaseService<TType, BibleCategoryEntity<TType>, BibleCategoryContract<TType>>, IBibleCategoryService<TType> where TType : class
+public class BibleCategoryService : BaseService<string, BibleCategoryEntity<string>, BibleCategoryContract<string>>, IBibleCategoryService<string> 
 {
-    protected IBibleCategoryRepository<TType> Repository => (IBibleCategoryRepository<TType>)_repo;
-    protected IBibleCategoryMapper<TType> Mapper => (IBibleCategoryMapper<TType>)_mapper;
+    protected IBibleCategoryRepository<string> Repository => (IBibleCategoryRepository<string>)_repo;
+    protected IBibleCategoryMapper<string> Mapper => (IBibleCategoryMapper<string>)_mapper;
 
-    public BibleCategoryService(IBibleCategoryRepository<TType> repo, IBibleCategoryMapper<TType> mapper) : base(repo, mapper)
+    public BibleCategoryService(IBibleCategoryRepository<string> repo, IBibleCategoryMapper<string> mapper) : base(repo, mapper)
     {
-
     }
 
-    public override Task<BibleCategoryContract<TType>> CreateAsync(BibleCategoryContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, BibleCategoryContract<TType> contract) => throw new NotImplementedException();
-    public override Task<BibleCategoryContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleCategoryContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<BibleCategoryContract<string>> CreateAsync(BibleCategoryContract<string> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, BibleCategoryContract<string> contract) => throw new NotImplementedException();
+    public override Task<BibleCategoryContract<string>> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleCategoryContract<string>>> GetAllAsync() => throw new NotImplementedException();
 }

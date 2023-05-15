@@ -7,14 +7,14 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleFormatMapper<TType> : BaseMapper<TType, BibleFormatEntity<TType>, BibleFormatContract<TType>>, IBibleFormatMapper<TType> where TType : class
+public class BibleFormatMapper : BaseMapper<string, BibleFormatEntity<string>, BibleFormatContract<string>>, IBibleFormatMapper<string> 
 {
-    public override BibleFormatEntity<TType> Map(BibleFormatContract<TType> value) => throw new NotImplementedException();
-    public override BibleFormatContract<TType> Map(BibleFormatEntity<TType> value) => throw new NotImplementedException();
-    public override IEnumerable<BibleFormatEntity<TType>> MapAll(IEnumerable<BibleFormatContract<TType>> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleFormatContract<TType>> MapAll(IEnumerable<BibleFormatEntity<TType>> values) => throw new NotImplementedException();
-    public override Task<BibleFormatEntity<TType>> MapAsync(BibleFormatContract<TType> value) => throw new NotImplementedException();
-    public override Task<BibleFormatContract<TType>> MapAsync(BibleFormatEntity<TType> value) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFormatEntity<TType>>> MapAllAsync(IEnumerable<BibleFormatContract<TType>> values) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFormatContract<TType>>> MapAllAsync(IEnumerable<BibleFormatEntity<TType>> values) => throw new NotImplementedException();
+    public override BibleFormatEntity<string> Map(BibleFormatContract<string> value) => throw new NotImplementedException();
+    public override BibleFormatContract<string> Map(BibleFormatEntity<string> value) => throw new NotImplementedException();
+    public override IEnumerable<BibleFormatEntity<string>> MapAll(IEnumerable<BibleFormatContract<string>> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleFormatContract<string>> MapAll(IEnumerable<BibleFormatEntity<string>> values) => throw new NotImplementedException();
+    public override Task<BibleFormatEntity<string>> MapAsync(BibleFormatContract<string> value) => throw new NotImplementedException();
+    public override Task<BibleFormatContract<string>> MapAsync(BibleFormatEntity<string> value) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleFormatEntity<string>>> MapAllAsync(IEnumerable<BibleFormatContract<string>> values) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleFormatContract<string>>> MapAllAsync(IEnumerable<BibleFormatEntity<string>> values) => throw new NotImplementedException();
 }

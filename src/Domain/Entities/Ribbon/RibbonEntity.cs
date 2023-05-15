@@ -2,17 +2,17 @@
 
 namespace Domain.Entities.Ribbon;
 
-public class RibbonEntity<TType> : BaseEntity<TType> where TType : class
+public class RibbonEntity<TType> : BaseEntity<TType> 
+    where TType : class
 {
-    public RibbonEntity(TType id) : base(id)
+    public TType? RibbonID => Id;
+    public RibbonSizeEntity<TType> RibbonSize { get; set; } = new RibbonSizeEntity<TType>();
+    public RibbonEntity() : base()
     {
     }
-
     public RibbonEntity(TType id, RibbonSizeEntity<TType> ribbonSize) : base(id)
     {
         RibbonSize = ribbonSize;
     }
 
-    public TType? RibbonID => Id;
-    public RibbonSizeEntity<TType> RibbonSize { get; set; } = new RibbonSizeEntity<TType>();
 }

@@ -1,6 +1,7 @@
 namespace Domain.Common.Classes;
 
-public abstract class BaseEntity<TType> where TType : class
+public abstract class BaseEntity<TType> 
+    where TType : class
 {
     internal TType? Id              { get; set; }
     internal DateTime Created       { get; set; }
@@ -8,7 +9,11 @@ public abstract class BaseEntity<TType> where TType : class
     internal DateTime? LastModified { get; set; }
     internal string? LastModifiedBy { get; set; }
 
-    protected BaseEntity() { }
+    protected BaseEntity()
+    {
+
+    }
+
     protected BaseEntity(TType id) 
     {
         Id = id;

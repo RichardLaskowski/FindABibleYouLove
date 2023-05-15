@@ -2,7 +2,8 @@
 
 namespace Domain.Entities.Bible;
 
-public class BibleFormatEntity<TType> : BaseEntity<TType> where TType : class
+public class BibleFormatEntity<TType> : BaseEntity<TType> 
+    where TType : class
 {
     public TType? BibleFormatID => Id;
     public string FormatName { get; set; } 

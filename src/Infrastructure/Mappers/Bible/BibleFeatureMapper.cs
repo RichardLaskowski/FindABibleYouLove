@@ -7,14 +7,14 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleFeatureMapper<TType> : BaseMapper<TType, BibleFeatureEntity<TType>, BibleFeatureContract<TType>>, IBibleFeatureMapper<TType> where TType : class
+public class BibleFeatureMapper : BaseMapper<string, BibleFeatureEntity<string>, BibleFeatureContract<string>>, IBibleFeatureMapper<string>
 {
-    public override BibleFeatureEntity<TType> Map(BibleFeatureContract<TType> value) => throw new NotImplementedException();
-    public override BibleFeatureContract<TType> Map(BibleFeatureEntity<TType> value) => throw new NotImplementedException();
-    public override IEnumerable<BibleFeatureEntity<TType>> MapAll(IEnumerable<BibleFeatureContract<TType>> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleFeatureContract<TType>> MapAll(IEnumerable<BibleFeatureEntity<TType>> values) => throw new NotImplementedException();
-    public override Task<BibleFeatureEntity<TType>> MapAsync(BibleFeatureContract<TType> value) => throw new NotImplementedException();
-    public override Task<BibleFeatureContract<TType>> MapAsync(BibleFeatureEntity<TType> value) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFeatureEntity<TType>>> MapAllAsync(IEnumerable<BibleFeatureContract<TType>> values) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFeatureContract<TType>>> MapAllAsync(IEnumerable<BibleFeatureEntity<TType>> values) => throw new NotImplementedException();
+    public override BibleFeatureEntity<string> Map(BibleFeatureContract<string> value) => throw new NotImplementedException();
+    public override BibleFeatureContract<string> Map(BibleFeatureEntity<string> value) => throw new NotImplementedException();
+    public override IEnumerable<BibleFeatureEntity<string>> MapAll(IEnumerable<BibleFeatureContract<string>> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleFeatureContract<string>> MapAll(IEnumerable<BibleFeatureEntity<string>> values) => throw new NotImplementedException();
+    public override Task<BibleFeatureEntity<string>> MapAsync(BibleFeatureContract<string> value) => throw new NotImplementedException();
+    public override Task<BibleFeatureContract<string>> MapAsync(BibleFeatureEntity<string> value) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleFeatureEntity<string>>> MapAllAsync(IEnumerable<BibleFeatureContract<string>> values) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleFeatureContract<string>>> MapAllAsync(IEnumerable<BibleFeatureEntity<string>> values) => throw new NotImplementedException();
 }

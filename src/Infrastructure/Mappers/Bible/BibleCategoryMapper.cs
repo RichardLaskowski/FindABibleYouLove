@@ -7,11 +7,11 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleCategoryMapper<TType> : BaseMapper<TType, BibleCategoryEntity<TType>, BibleCategoryContract<TType>>, IBibleCategoryMapper<TType> where TType : class
+public class BibleCategoryMapper : BaseMapper<string, BibleCategoryEntity<string>, BibleCategoryContract<string>>, IBibleCategoryMapper<string> 
 {
-    public override BibleCategoryEntity<TType> Map(BibleCategoryContract<TType> bibleCategoryContract)
+    public override BibleCategoryEntity<string> Map(BibleCategoryContract<string> bibleCategoryContract)
     {
-        BibleCategoryEntity<TType> bibleCategoryEntity = new(
+        BibleCategoryEntity<string> bibleCategoryEntity = new(
             bibleCategoryContract.BibleCategoryID,
             bibleCategoryContract.CategoryName,
             bibleCategoryContract.CategoryDescription);
@@ -19,9 +19,9 @@ public class BibleCategoryMapper<TType> : BaseMapper<TType, BibleCategoryEntity<
         return bibleCategoryEntity;
     }
 
-    public override BibleCategoryContract<TType> Map(BibleCategoryEntity<TType> bibleCategoryEntity)
+    public override BibleCategoryContract<string> Map(BibleCategoryEntity<string> bibleCategoryEntity)
     {
-        BibleCategoryContract<TType> bibleCategoryContract = new(
+        BibleCategoryContract<string> bibleCategoryContract = new(
             bibleCategoryEntity.BibleCategoryID,
             bibleCategoryEntity.CategoryName,
             bibleCategoryEntity.CategoryDescription);
@@ -29,10 +29,10 @@ public class BibleCategoryMapper<TType> : BaseMapper<TType, BibleCategoryEntity<
         return bibleCategoryContract;
     }
 
-    public override IEnumerable<BibleCategoryEntity<TType>> MapAll(IEnumerable<BibleCategoryContract<TType>> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleCategoryContract<TType>> MapAll(IEnumerable<BibleCategoryEntity<TType>> values) => throw new NotImplementedException();
-    public override Task<BibleCategoryEntity<TType>> MapAsync(BibleCategoryContract<TType> value) => throw new NotImplementedException();
-    public override Task<BibleCategoryContract<TType>> MapAsync(BibleCategoryEntity<TType> value) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleCategoryEntity<TType>>> MapAllAsync(IEnumerable<BibleCategoryContract<TType>> values) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleCategoryContract<TType>>> MapAllAsync(IEnumerable<BibleCategoryEntity<TType>> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleCategoryEntity<string>> MapAll(IEnumerable<BibleCategoryContract<string>> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleCategoryContract<string>> MapAll(IEnumerable<BibleCategoryEntity<string>> values) => throw new NotImplementedException();
+    public override Task<BibleCategoryEntity<string>> MapAsync(BibleCategoryContract<string> value) => throw new NotImplementedException();
+    public override Task<BibleCategoryContract<string>> MapAsync(BibleCategoryEntity<string> value) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleCategoryEntity<string>>> MapAllAsync(IEnumerable<BibleCategoryContract<string>> values) => throw new NotImplementedException();
+    public override Task<IEnumerable<BibleCategoryContract<string>>> MapAllAsync(IEnumerable<BibleCategoryEntity<string>> values) => throw new NotImplementedException();
 }

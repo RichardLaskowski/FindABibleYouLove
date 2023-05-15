@@ -1,4 +1,8 @@
+using System;
+
 using API.Endpoints.Bible;
+
+using Domain.Entities.Bible;
 
 using Microsoft.AspNetCore.Builder;
 
@@ -25,6 +29,10 @@ public static class Program
         app.UseEndPointDefinitions();
 
         #endregion Configure Pipeline
+
+        #region Seed Database
+
+        #endregion
 
         app.Run();
     }

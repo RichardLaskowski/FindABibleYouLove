@@ -2,7 +2,8 @@
 
 namespace Domain.Entities.Bible;
 
-public class BibleFeatureEntity<TType> : BaseEntity<TType> where TType : class
+public class BibleFeatureEntity<TType> : BaseEntity<TType> 
+    where TType : class
 {
     public TType? BibleFeatureID => Id;
     public string FeatureName { get; set; }

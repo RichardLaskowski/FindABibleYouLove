@@ -2,9 +2,12 @@
 
 namespace Domain.Entities.Ribbon;
 
-public class RibbonColorEntity<TType> : BaseEntity<TType> where TType : class
+public class RibbonColorEntity<TType> : BaseEntity<TType> 
+    where TType : class
 {
-    public RibbonColorEntity(TType id) : base(id)
+    public TType? RibbonColorID => Id;
+    public string RibbonColor { get; set; } = string.Empty;
+    public RibbonColorEntity() : base()
     {
     }
 
@@ -13,6 +16,4 @@ public class RibbonColorEntity<TType> : BaseEntity<TType> where TType : class
         RibbonColor = ribbonColor;
     }
 
-    public TType? RibbonColorID => Id;
-    public string RibbonColor { get; set; } = string.Empty;
 }

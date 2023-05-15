@@ -3,8 +3,7 @@ using FindABibleYouLove.Contracts.Cover;
 
 namespace Application.Services.Cover;
 
-public interface ICoverService<TType>
-    : IService<TType, CoverContract<TType>>
+public interface ICoverService<TType> : IService<TType, CoverContract<TType>>
     where TType : class
 {
 

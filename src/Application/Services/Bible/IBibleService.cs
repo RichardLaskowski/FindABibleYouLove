@@ -3,8 +3,7 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Application.Services.Bible;
 
-public interface IBibleService<TType>
-    : IService<TType, BibleContract<TType>>
+public interface IBibleService<TType> : IService<TType, BibleContract<TType>>
     where TType : class
 {
 

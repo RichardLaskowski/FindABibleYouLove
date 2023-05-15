@@ -2,9 +2,13 @@
 
 namespace Domain.Entities.Cover;
 
-public class CoverColorEntity<TType> : BaseEntity<TType> where TType : class
+public class CoverColorEntity<TType> : BaseEntity<TType> 
+    where TType : class
 {
-    public CoverColorEntity(TType id) : base(id)
+    public TType? CoverColorID => Id;
+    public string ColorName { get; set; } = string.Empty;
+
+    public CoverColorEntity() : base()
     {
     }
 
@@ -12,7 +16,4 @@ public class CoverColorEntity<TType> : BaseEntity<TType> where TType : class
     {
         ColorName = colorName;
     }
-
-    public TType? CoverColorID => Id;
-    public string ColorName { get; set; } = string.Empty;
 }

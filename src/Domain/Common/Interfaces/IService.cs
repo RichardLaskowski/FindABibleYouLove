@@ -2,7 +2,9 @@
 
 namespace Domain.Common.Interfaces;
 
-public interface IService<TType, TContract> where TType : class where TContract : BaseContract<TType>
+public interface IService<TType, TContract> 
+    where TType : class 
+    where TContract : BaseContract<TType>
 {
     Task<TContract> CreateAsync(TContract contract);
     Task DeleteAsync(TType id);
