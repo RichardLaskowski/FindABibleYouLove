@@ -1,15 +1,12 @@
 ﻿using Application.Mappers.Cover;
 using Application.Repositories.Cover;
 using Application.Services.Cover;
-
-using Domain.Common.Classes;
-using Domain.Entities.Cover;
-
+using Domain.Base.Classes.Services;
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverMaterialService<TType> : BaseService<TType, CoverMaterialEntity<TType>, CoverMaterialContract<TType>>, ICoverMaterialService<TType> where TType : class
+public class CoverMaterialService : StringBaseService<CoverMaterialContract>, ICoverMaterialService
 {
     protected ICoverMaterialRepository<TType> Repository => (ICoverMaterialRepository<TType>)_repo;
     protected ICoverMaterialMapper<TType> Mapper => (ICoverMaterialMapper<TType>)_mapper;
@@ -19,9 +16,9 @@ public class CoverMaterialService<TType> : BaseService<TType, CoverMaterialEntit
 
     }
 
-    public override Task<CoverMaterialContract<TType>> CreateAsync(CoverMaterialContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, CoverMaterialContract<TType> contract) => throw new NotImplementedException();
-    public override Task<CoverMaterialContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<CoverMaterialContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<CoverMaterialContract> CreateAsync(CoverMaterialContract contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, CoverMaterialContract contract) => throw new NotImplementedException();
+    public override Task<CoverMaterialContract> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverMaterialContract>> GetAllAsync() => throw new NotImplementedException();
 }

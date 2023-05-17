@@ -1,15 +1,13 @@
-﻿using System.Data.Common;
-using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Bible;
 
-public class BibleCategoryEntity<TType> : BaseEntity<TType>
-    where TType : class
+public class BibleCategoryEntity : StringBaseEntity
 {
-    public TType? BibleCategoryID => Id; 
+    public string BibleCategoryId => StringId;
 
-    public string CategoryName { get; set; }
-    public string CategoryDescription { get; set;}
+    public string CategoryName          { get; set; }
+    public string CategoryDescription   { get; set; }
 
     public BibleCategoryEntity() : base()
     {
@@ -18,9 +16,9 @@ public class BibleCategoryEntity<TType> : BaseEntity<TType>
     }
 
     public BibleCategoryEntity(
-        TType bibleCategoryID,
+        string bibleCategoryId,
         string categoryName,
-        string categoryDescription) : base(id: bibleCategoryID)
+        string categoryDescription) : base(stringId: bibleCategoryId)
     {
         CategoryName        = categoryName;
         CategoryDescription = categoryDescription;

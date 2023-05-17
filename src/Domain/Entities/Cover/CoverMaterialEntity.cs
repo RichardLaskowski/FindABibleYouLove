@@ -1,22 +1,20 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Cover;
 
-public class CoverMaterialEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class CoverMaterialEntity : StringBaseEntity
 {
-    public TType? CoverMaterialID => Id;
-    public string MaterialName { get; set; } = string.Empty;
-    public string MaterialDescription { get; set; } = string.Empty;
-    
+    public string CoverMaterialId => StringId;
+
+    public string MaterialName { get; set; }
+
     public CoverMaterialEntity() : base()
     {
+        MaterialName = string.Empty;
     }
 
-    public CoverMaterialEntity(TType id, string materialName, string materialDescription) : base(id)
+    public CoverMaterialEntity(string coverMaterialId, string materialName) : base(coverMaterialId)
     {
         MaterialName = materialName;
-        MaterialDescription = materialDescription;
     }
-
 }

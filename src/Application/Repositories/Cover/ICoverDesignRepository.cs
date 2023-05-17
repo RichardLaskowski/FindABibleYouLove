@@ -1,9 +1,9 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using Domain.Entities.Cover;
 
 namespace Application.Repositories.Cover;
 
-public interface ICoverDesignRepository<TType> : IRepository<TType, CoverDesignEntity<TType>> where TType : class
+public interface ICoverDesignRepository<TType> : IBaseRepository<TType, CoverDesignEntity<TType>> where TType : class
 {
 
 }

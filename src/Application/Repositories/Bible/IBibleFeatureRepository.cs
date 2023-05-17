@@ -1,9 +1,9 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using Domain.Entities.Bible;
 
 namespace Application.Repositories.Bible;
 
-public interface IBibleFeatureRepository<TType> : IRepository<TType, BibleFeatureEntity<TType>> where TType : class
+public interface IBibleFeatureRepository<TType> : IBaseRepository<TType, BibleFeatureEntity<TType>> where TType : class
 {
 
 }

@@ -1,12 +1,12 @@
 using Domain.Entities.Ribbon;
-using Domain.Common.Interfaces;
 
 using FindABibleYouLove.Contracts.Ribbon;
+using Domain.Base.Interfaces;
 
 namespace Application.Mappers.Ribbon;
 
 public interface IRibbonMapper<TType>
-    : IMapper<RibbonEntity<TType>, RibbonContract<TType>>
+    : IBaseMapper<RibbonEntity<TType>, RibbonContract>
     where TType : class
 {
 }

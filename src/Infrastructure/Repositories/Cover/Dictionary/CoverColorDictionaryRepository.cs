@@ -1,9 +1,10 @@
 using Application.Repositories.Cover;
+using Domain.Base.Classes.Repositories;
 using Domain.Entities.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverColorDictionaryRepository<TType> : DictionaryRepository<TType, CoverColorEntity<TType>>, ICoverColorRepository<TType> where TType : class
+public class CoverColorDictionaryRepository<TType> : DictionaryBaseRepository<TType, CoverColorEntity<TType>>, ICoverColorRepository<TType> where TType : class
 {
     protected Dictionary<TType, CoverColorEntity<TType>> CoverColorDictionary => (Dictionary<TType, CoverColorEntity<TType>>)Dictionary;
 

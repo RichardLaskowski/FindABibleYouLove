@@ -1,20 +1,21 @@
 ﻿using System.Collections.ObjectModel;
-
-using Domain.Common.Classes;
+using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Ribbon;
 
-public class RibbonDetailEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class RibbonDetailEntity: StringBaseEntity
 {
-    public TType? RibbonDetailID => Id;
-    public IEnumerable<RibbonEntity<TType>> Ribbons = new Collection<RibbonEntity<TType>>();
+    public string RibbonDetailId => StringId;
+
+
+    public IEnumerable<RibbonEntity> Ribbons {get; set; }
 
     public RibbonDetailEntity() : base()
     {
+        Ribbons = new Collection<RibbonEntity>();
     }
     
-    public RibbonDetailEntity(TType id, IEnumerable<RibbonEntity<TType>> ribbons) : base(id)
+    public RibbonDetailEntity(string ribbonDetailId, IEnumerable<RibbonEntity> ribbons) : base(ribbonDetailId)
     {
         Ribbons = ribbons;
     }

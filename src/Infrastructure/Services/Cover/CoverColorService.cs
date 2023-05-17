@@ -1,27 +1,24 @@
 ﻿using Application.Mappers.Cover;
 using Application.Repositories.Cover;
 using Application.Services.Cover;
-
-using Domain.Common.Classes;
-using Domain.Entities.Cover;
-
+using Domain.Base.Classes.Services;
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverColorService<TType> : BaseService<TType, CoverColorEntity<TType>, CoverColorContract<TType>>, ICoverColorService<TType> where TType : class
+public class CoverColorService : StringBaseService<CoverColorContract>, ICoverColorService 
 {
-    protected ICoverColorRepository<TType> Repository => (ICoverColorRepository<TType>)_repo;
-    protected ICoverColorMapper<TType> Mapper => (ICoverColorMapper<TType>)_mapper;
+    protected ICoverColorRepository<string> Repository => (ICoverColorRepository<string>)_repo;
+    protected ICoverColorMapper<string> Mapper => (ICoverColorMapper<string>)_mapper;
 
-    public CoverColorService(ICoverColorRepository<TType> repo, ICoverColorMapper<TType> mapper) : base(repo, mapper)
+    public CoverColorService(ICoverColorRepository<string> repo, ICoverColorMapper<string> mapper) : base(repo, mapper)
     {
 
     }
 
-    public override Task<CoverColorContract<TType>> CreateAsync(CoverColorContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, CoverColorContract<TType> contract) => throw new NotImplementedException();
-    public override Task<CoverColorContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<CoverColorContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<CoverColorContract> CreateAsync(CoverColorContract contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, CoverColorContract contract) => throw new NotImplementedException();
+    public override Task<CoverColorContract> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverColorContract>> GetAllAsync() => throw new NotImplementedException();
 }

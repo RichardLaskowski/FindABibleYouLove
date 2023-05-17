@@ -1,9 +1,9 @@
-using Domain.Common.Classes;
+using Domain.Base.Classes.Contracts;
 
 namespace FindABibleYouLove.Contracts.Bible;
 
-public record BibleFeatureContract<TType>(
-    TType BibleFeatureID,
+public record BibleFeatureContract(
+    string BibleFeatureId,
     string FeatureName,
     string FeatureDescription) 
-    : BaseContract<TType>(ID: BibleFeatureID) where TType : class;
+    : StringBaseContract(BibleFeatureId); 

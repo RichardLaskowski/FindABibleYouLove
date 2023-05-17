@@ -1,23 +1,27 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Bible;
 
-public class BibleTranslationEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class BibleTranslationEntity : StringBaseEntity 
 {
 
-    public TType? BibleTranslationID => Id;
-    public string TranslationName { get; set; } = string.Empty;
-    public string TranslationAbbreviation { get; set; } = string.Empty;
-    public string TranslationDescription { get; set; } = string.Empty;
-    public BibleTranslationEntity() : base()
+    public string BibleTranslationId => StringId;
+
+    public string TranslationName           { get; set; }
+    public string TranslationAbbreviation   { get; set; }
+    
+    public BibleTranslationEntity() : base() 
     {
+        TranslationName         = string.Empty;
+        TranslationAbbreviation = string.Empty;
     }
 
-    public BibleTranslationEntity(TType id, string translationName, string translationAbbreviation, string translationDescription) : base(id)
+    public BibleTranslationEntity(
+        string bibleTranslationId,
+        string translationName,
+        string translationAbbreviation) : base(bibleTranslationId)
     {
-        TranslationName = translationName;
+        TranslationName         = translationName;
         TranslationAbbreviation = translationAbbreviation;
-        TranslationDescription = translationDescription;
     }
 }

@@ -1,8 +1,8 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using Domain.Entities.Ribbon;
 
 using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Application.Mappers.Ribbon;
 
-public interface IRibbonColorMapper<TType> : IMapper<RibbonColorEntity<TType>, RibbonColorContract<TType>> where TType : class { }
+public interface IRibbonColorMapper<TType> : IBaseMapper<RibbonColorEntity<TType>, RibbonColorContract> where TType : class { }

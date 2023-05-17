@@ -1,68 +1,69 @@
 using Application.Repositories.Bible;
+using Domain.Base.Classes.Repositories;
 using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleCategoryListRepository<TType> : ListRepository<TType, BibleCategoryEntity<TType>>, IBibleCategoryRepository<TType> where TType : class
+public class BibleCategoryListRepository<TType> : ListBaseRepository<TType, BibleCategoryEntity>, IBibleCategoryRepository<TType> where TType : class
 {
-    protected List<BibleCategoryEntity<TType>> BibleCategoryList => (List<BibleCategoryEntity<TType>>)List;
+    protected List<BibleCategoryEntity> BibleCategoryList => (List<BibleCategoryEntity>)List;
 
-    public override BibleCategoryEntity<TType> Add(BibleCategoryEntity<TType> entity)
+    public override BibleCategoryEntity Add(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<TType>> AddRange(IEnumerable<BibleCategoryEntity<TType>> entities)
+    public override IEnumerable<BibleCategoryEntity> AddRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<TType>> Find(Func<BibleCategoryEntity<TType>, bool> predicate)
+    public override IEnumerable<BibleCategoryEntity> Find(Func<BibleCategoryEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleCategoryEntity<TType>>> FindAsync(Func<BibleCategoryEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<BibleCategoryEntity>> FindAsync(Func<BibleCategoryEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleCategoryEntity<TType> Get(TType id)
+    public override BibleCategoryEntity Get(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<TType>> GetAll()
+    public override IEnumerable<BibleCategoryEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleCategoryEntity<TType>>> GetAllAsync()
+    public override Task<IEnumerable<BibleCategoryEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<BibleCategoryEntity<TType>> GetAsync(TType id)
+    public override Task<BibleCategoryEntity> GetAsync(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleCategoryEntity<TType> entity)
+    public override void Remove(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleCategoryEntity<TType>> entities)
+    public override void RemoveRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleCategoryEntity<TType> entity)
+    public override void Update(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleCategoryEntity<TType>> entities)
+    public override void UpdateRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }

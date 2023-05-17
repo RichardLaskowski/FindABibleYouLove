@@ -1,8 +1,8 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Contracts;
 
 namespace FindABibleYouLove.Contracts.Cover;
 
-public record CoverMaterialContract<TType>(
-    TType CoverMaterialID,
+public record CoverMaterialContract(
+    string CoverMaterialId,
     string MaterialName)
-    : BaseContract<TType>(CoverMaterialID) where TType : class;
+    : StringBaseContract(CoverMaterialId);

@@ -1,8 +1,8 @@
-﻿using Domain.Common.Interfaces;
+﻿using Domain.Base.Interfaces;
 using Domain.Entities.Cover;
 
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Application.Mappers.Cover;
 
-public interface ICoverMapper<TType> : IMapper<CoverEntity<TType>, CoverContract<TType>> where TType : class { }
+public interface ICoverMapper<TType> : IBaseMapper<CoverEntity<TType>, CoverContract> where TType : class { }

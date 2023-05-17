@@ -1,9 +1,9 @@
-using Domain.Common.Classes;
+using Domain.Base.Classes.Contracts;
 
 namespace FindABibleYouLove.Contracts.Ribbon;
 
-public record RibbonContract<TType>(
-    TType RibbonID,
+public record RibbonContract(
+    string RibbonId,
     string RibbonColor,
     string RibbonSize)
-    : BaseContract<TType>(RibbonID) where TType : class;
+    : StringBaseContract(RibbonId);

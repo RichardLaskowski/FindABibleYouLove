@@ -1,26 +1,22 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Bible;
 
-public class BibleFeatureEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class BibleFeatureEntity : StringBaseEntity
 {
-    public TType? BibleFeatureID => Id;
-    public string FeatureName { get; set; }
-    public string FeatureDescription { get; set; }
+    public string BibleFeatureId => StringId;
+
+    public string FeatureName           { get; set; }
 
     public BibleFeatureEntity() : base() 
     { 
         FeatureName         = string.Empty;
-        FeatureDescription  = string.Empty;
     }
 
     public BibleFeatureEntity(
-        TType bibleFeatureID,
-        string featureName,
-        string featureDescription) : base(bibleFeatureID)
+        string bibleFeatureId,
+        string featureName) : base(bibleFeatureId)
     {
-        FeatureName = featureName;
-        FeatureDescription = featureDescription;
+        FeatureName         = featureName;
     }
 }

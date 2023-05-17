@@ -1,10 +1,9 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Application.Services.Ribbon;
 
-public interface IRibbonService<TType> : IService<TType, RibbonContract<TType>>
-    where TType : class
+public interface IRibbonService: IStringBaseService<RibbonContract>
 {
 
 }

@@ -1,15 +1,12 @@
 ﻿using Application.Mappers.Ribbon;
 using Application.Repositories.Ribbon;
 using Application.Services.Ribbon;
-
-using Domain.Common.Classes;
-using Domain.Entities.Ribbon;
-
+using Domain.Base.Classes.Services;
 using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonDetailService<TType> : BaseService<TType, RibbonDetailEntity<TType>, RibbonDetailContract<TType>>, IRibbonDetailService<TType> where TType : class
+public class RibbonDetailService: StringBaseService<RibbonDetailContract>, IRibbonDetailService
 {
     protected IRibbonDetailRepository<TType> Repository => (IRibbonDetailRepository<TType>)_repo;
     protected IRibbonDetailMapper<TType> Mapper => (IRibbonDetailMapper<TType>)_mapper;
@@ -19,9 +16,9 @@ public class RibbonDetailService<TType> : BaseService<TType, RibbonDetailEntity<
 
     }
 
-    public override Task<RibbonDetailContract<TType>> CreateAsync(RibbonDetailContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, RibbonDetailContract<TType> contract) => throw new NotImplementedException();
-    public override Task<RibbonDetailContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<RibbonDetailContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<RibbonDetailContract> CreateAsync(RibbonDetailContract contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, RibbonDetailContract contract) => throw new NotImplementedException();
+    public override Task<RibbonDetailContract> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<RibbonDetailContract>> GetAllAsync() => throw new NotImplementedException();
 }

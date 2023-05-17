@@ -1,19 +1,21 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Ribbon;
 
-public class RibbonColorEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class RibbonColorEntity : StringBaseEntity
 {
-    public TType? RibbonColorID => Id;
-    public string RibbonColor { get; set; } = string.Empty;
+    public string RibbonColorId => StringId;
+
+    public string ColorName { get; set; } 
+
     public RibbonColorEntity() : base()
     {
+        ColorName = string.Empty;
     }
 
-    public RibbonColorEntity(TType id, string ribbonColor) : base(id)
+    public RibbonColorEntity(string ribbonColorId, string colorName) : base(ribbonColorId)
     {
-        RibbonColor = ribbonColor;
+        ColorName = colorName;
     }
 
 }

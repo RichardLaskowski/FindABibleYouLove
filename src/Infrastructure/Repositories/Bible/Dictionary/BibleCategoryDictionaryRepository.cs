@@ -1,9 +1,10 @@
 ﻿using Application.Repositories.Bible;
+using Domain.Base.Classes.Repositories;
 using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleCategoryDictionaryRepository : DictionaryRepository<string, BibleCategoryEntity<string>>, IBibleCategoryRepository<string> 
+public class BibleCategoryDictionaryRepository : DictionaryBaseRepository<string, BibleCategoryEntity<string>>, IBibleCategoryRepository<string> 
 {
     protected Dictionary<string, BibleCategoryEntity<string>> BibleCategoryDictionary => (Dictionary<string, BibleCategoryEntity<string>>)Dictionary;
 
@@ -66,15 +67,15 @@ public class BibleCategoryDictionaryRepository : DictionaryRepository<string, Bi
 
     public override void Seed()
     {
-        BibleCategoryEntity<string> TextCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Text", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> StudyCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Study", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> JournalingCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Journaling", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> ReadersCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Readers", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> MinistryCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Ministry", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> ChildrenAndTeensCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Children and Teens", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> PremiumCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Premium", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> DevotionalCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Devotional", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> OtherCategory = new BibleCategoryEntity<string>(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Other", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> TextCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Text", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> StudyCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Study", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> JournalingCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Journaling", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> ReadersCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Readers", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> MinistryCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Ministry", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> ChildrenAndTeensCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Children and Teens", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> PremiumCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Premium", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> DevotionalCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Devotional", categoryDescription: string.Empty);
+        BibleCategoryEntity<string> OtherCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Other", categoryDescription: string.Empty);
 
         BibleCategoryDictionary[key: TextCategory.BibleCategoryID] = TextCategory;
         BibleCategoryDictionary[key: StudyCategory.BibleCategoryID] = StudyCategory;

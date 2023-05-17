@@ -1,8 +1,8 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
-namespace Domain.Common.Interfaces;
+namespace Domain.Base.Interfaces;
 
-public interface IRepository<TType, TEntity> 
+public interface IBaseRepository<TType, TEntity>
     where TType : class
     where TEntity : BaseEntity<TType>
 {

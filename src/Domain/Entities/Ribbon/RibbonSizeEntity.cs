@@ -1,14 +1,20 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Ribbon;
 
-public class RibbonSizeEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class RibbonSizeEntity : StringBaseEntity
 {
-    public TType? RibbonSizeID => Id;
+    public string RibbonSizeId => StringId;
+
     public decimal RibbonSize { get; set; }
-    public RibbonSizeEntity() : base() { }
 
-    public RibbonSizeEntity(TType id, decimal ribbonSize) : base(id) => RibbonSize = ribbonSize;
+    public RibbonSizeEntity() : base() 
+    {
+    
+    }
 
+    public RibbonSizeEntity(string ribbonSizeId, decimal ribbonSize) : base(ribbonSizeId)
+    {
+        RibbonSize = ribbonSize;
+    }
 }

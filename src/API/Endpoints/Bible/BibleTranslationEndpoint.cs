@@ -14,9 +14,9 @@ public class BibleTranslationEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleTranslationsAsync(IBibleTranslationService<string> bibleTranslationService) => Results.Ok(value: await bibleTranslationService.GetAllAsync());
+    internal async Task<IResult> GetBibleTranslationsAsync(IBibleTranslationService bibleTranslationService) => Results.Ok(value: await bibleTranslationService.GetAllAsync());
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleTranslationService<string>), implementationType: typeof(BibleTranslationService));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleTranslationService), implementationType: typeof(BibleTranslationService));
 }

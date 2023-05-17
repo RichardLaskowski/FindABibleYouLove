@@ -1,10 +1,10 @@
-using Domain.Common.Classes;
+using Domain.Base.Classes.Contracts;
 
 namespace FindABibleYouLove.Contracts.Bible;
 
-public record BibleTranslationContract<TType>(
-    TType BibleTranslationID,
+public record BibleTranslationContract(
+    string BibleTranslationId,
     string TranslationName,
     string TranslationAbbreviation,
     string TranslationDescription)
-    : BaseContract<TType>(ID: BibleTranslationID) where TType : class;
+    : StringBaseContract(BibleTranslationId);

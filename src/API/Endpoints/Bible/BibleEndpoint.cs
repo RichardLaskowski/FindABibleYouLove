@@ -17,10 +17,10 @@ public class BibleEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBiblesAsync(IBibleService<string> service) => Results.Ok(value: await service.GetAllAsync());
+    internal async Task<IResult> GetBiblesAsync(IBibleService service) => Results.Ok(value: await service.GetAllAsync());
 
     #endregion
 
     public void DefineServices(IServiceCollection services)
-    => services.AddSingleton(serviceType: typeof(IBibleService<string>), implementationType: typeof(BibleService));
+    => services.AddSingleton(serviceType: typeof(IBibleService), implementationType: typeof(BibleService));
 }

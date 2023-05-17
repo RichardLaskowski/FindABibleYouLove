@@ -21,5 +21,5 @@ public class BibleFormatEndpoint : IEndpoint
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFormatService<string>), implementationType: typeof(BibleFormatService));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFormatService), implementationType: typeof(BibleFormatService));
 }

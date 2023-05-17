@@ -1,25 +1,17 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Entities;
 
 namespace Domain.Entities.Bible;
 
-public class BibleFormatEntity<TType> : BaseEntity<TType> 
-    where TType : class
+public class BibleFormatEntity: StringBaseEntity
 {
-    public TType? BibleFormatID => Id;
-    public string FormatName { get; set; } 
-    public string FormatDescription { get; set; } 
+    public string BibleFormatId => StringId;
+
+    public string FormatName        { get; set; } 
 
     public BibleFormatEntity() : base() 
     {
-        FormatName = string.Empty;
-        FormatDescription = string.Empty;
+        FormatName          = string.Empty;
     }
-    public BibleFormatEntity(
-        TType bibleFormatID,
-        string formatName,
-        string formatDescription) : base(bibleFormatID)
-    {
-        FormatName = formatName;
-        FormatDescription = formatDescription;
-    }
+
+    public BibleFormatEntity(string bibleFormatId, string formatName) : base(bibleFormatId) { FormatName = formatName; }
 }

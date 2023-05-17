@@ -1,16 +1,18 @@
-﻿using Domain.Common.Interfaces;
+﻿using Domain.Base.Classes.Contracts;
+using Domain.Base.Classes.Entities;
+using Domain.Base.Interfaces;
 
-namespace Domain.Common.Classes;
+namespace Domain.Base.Classes.Services;
 
-public abstract class BaseService<TType, TEntity, TContract> : IService<TType, TContract>
+public abstract class BaseService<TType, TEntity, TContract> : IBaseService<TType, TContract>
     where TType : class
     where TEntity : BaseEntity<TType>
     where TContract : BaseContract<TType>
 {
-    protected IRepository<TType, TEntity> _repo;
-    protected IMapper<TEntity, TContract> _mapper;
+    protected IBaseRepository<TType, TEntity> _repo;
+    protected IBaseMapper<TEntity, TContract> _mapper;
 
-    public BaseService(IRepository<TType, TEntity> repo, IMapper<TEntity, TContract> mapper)
+    public BaseService(IBaseRepository<TType, TEntity> repo, IBaseMapper<TEntity, TContract> mapper)
     {
         _repo = repo;
         _mapper = mapper;

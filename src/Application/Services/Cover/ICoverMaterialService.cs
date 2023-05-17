@@ -1,10 +1,9 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Application.Services.Cover;
 
-public interface ICoverMaterialService<TType> : IService<TType, CoverMaterialContract<TType>>
-    where TType : class
+public interface ICoverMaterialService: IStringBaseService<CoverMaterialContract>
 {
 
 }

@@ -1,9 +1,11 @@
-﻿using Domain.Common.Interfaces;
+﻿using Domain.Base.Classes.Contracts;
+using Domain.Base.Classes.Entities;
+using Domain.Base.Interfaces;
 
-namespace Domain.Common.Classes;
-public abstract class BaseMapper<TType, TEntity, TContract> : IMapper<TEntity, TContract> 
-    where TType : class 
-    where TEntity : BaseEntity<TType> 
+namespace Domain.Base.Classes.Mappers;
+public abstract class BaseMapper<TType, TEntity, TContract> : IBaseMapper<TEntity, TContract>
+    where TType : class
+    where TEntity : BaseEntity<TType>
     where TContract : BaseContract<TType>
 {
     public abstract TEntity Map(TContract value);

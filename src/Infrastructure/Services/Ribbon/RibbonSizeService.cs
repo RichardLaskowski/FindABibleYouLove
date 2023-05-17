@@ -1,16 +1,13 @@
 ﻿using Application.Mappers.Ribbon;
 using Application.Repositories.Ribbon;
 using Application.Services.Ribbon;
-
-using Domain.Common.Classes;
-using Domain.Entities.Ribbon;
-
+using Domain.Base.Classes.Services;
 using FindABibleYouLove.Contracts.Ribbon;
 
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonSizeService<TType> : BaseService<TType, RibbonSizeEntity<TType>, RibbonSizeContract<TType>>, IRibbonSizeService<TType> where TType : class
+public class RibbonSizeService : StringBaseService<RibbonSizeContract>, IRibbonSizeService
 {
     protected IRibbonSizeRepository<TType> Repository => (IRibbonSizeRepository<TType>)_repo;
     protected IRibbonSizeMapper<TType> Mapper => (IRibbonSizeMapper<TType>)_mapper;
@@ -20,9 +17,9 @@ public class RibbonSizeService<TType> : BaseService<TType, RibbonSizeEntity<TTyp
 
     }
 
-    public override Task<RibbonSizeContract<TType>> CreateAsync(RibbonSizeContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, RibbonSizeContract<TType> contract) => throw new NotImplementedException();
-    public override Task<RibbonSizeContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<RibbonSizeContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<RibbonSizeContract> CreateAsync(RibbonSizeContract contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, RibbonSizeContract contract) => throw new NotImplementedException();
+    public override Task<RibbonSizeContract> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<RibbonSizeContract>> GetAllAsync() => throw new NotImplementedException();
 }

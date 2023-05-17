@@ -1,15 +1,14 @@
 ﻿using Application.Mappers.Cover;
 using Application.Repositories.Cover;
 using Application.Services.Cover;
-
-using Domain.Common.Classes;
+using Domain.Base.Classes.Services;
 using Domain.Entities.Cover;
 
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverDesignService<TType> : BaseService<TType, CoverDesignEntity<TType>, CoverDesignContract<TType>>, ICoverDesignService<TType> where TType : class
+public class CoverDesignService : StringBaseService<CoverDesignContract>, ICoverDesignService
 {
     protected ICoverDesignRepository<TType> Repository => (ICoverDesignRepository<TType>)_repo;
     protected ICoverDesignMapper<TType> Mapper => (ICoverDesignMapper<TType>)_mapper;
@@ -19,9 +18,9 @@ public class CoverDesignService<TType> : BaseService<TType, CoverDesignEntity<TT
 
     }
 
-    public override Task<CoverDesignContract<TType>> CreateAsync(CoverDesignContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, CoverDesignContract<TType> contract) => throw new NotImplementedException();
-    public override Task<CoverDesignContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<CoverDesignContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<CoverDesignContract> CreateAsync(CoverDesignContract contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, CoverDesignContract contract) => throw new NotImplementedException();
+    public override Task<CoverDesignContract> GetAsync(string id) => throw new NotImplementedException();
+    public override Task<IEnumerable<CoverDesignContract>> GetAllAsync() => throw new NotImplementedException();
 }

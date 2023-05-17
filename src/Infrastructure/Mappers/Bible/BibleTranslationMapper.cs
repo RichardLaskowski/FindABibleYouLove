@@ -1,35 +1,34 @@
 ﻿using Application.Mappers.Bible;
-
-using Domain.Common.Classes;
+using Domain.Base.Classes.Mappers;
 using Domain.Entities.Bible;
 
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleTranslationMapper<TType> : BaseMapper<TType, BibleTranslationEntity<TType>, BibleTranslationContract<TType>>, IBibleTranslationMapper<TType> where TType : class
+public class BibleTranslationMapper<TType> : BaseMapper<TType, BibleTranslationEntity<TType>, BibleTranslationContract>, IBibleTranslationMapper<TType> where TType : class
 {
-    public override BibleTranslationEntity<TType> Map(BibleTranslationContract<TType> bibleTranslationContract) => new(
+    public override BibleTranslationEntity<TType> Map(BibleTranslationContract bibleTranslationContract) => new(
         bibleTranslationContract.BibleTranslationID,
         bibleTranslationContract.TranslationName,
         bibleTranslationContract.TranslationAbbreviation,
         bibleTranslationContract.TranslationDescription);
 
-    public override BibleTranslationContract<TType> Map(BibleTranslationEntity<TType> bibleTranslationEntity) => new(
+    public override BibleTranslationContract Map(BibleTranslationEntity<TType> bibleTranslationEntity) => new(
         bibleTranslationEntity.BibleTranslationID,
         bibleTranslationEntity.TranslationName,
         bibleTranslationEntity.TranslationAbbreviation,
         bibleTranslationEntity.TranslationDescription);
 
-    public override IEnumerable<BibleTranslationEntity<TType>> MapAll(IEnumerable<BibleTranslationContract<TType>> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleTranslationContract<TType>> MapAll(IEnumerable<BibleTranslationEntity<TType>> values) => throw new NotImplementedException();
-    public override async Task<BibleTranslationEntity<TType>> MapAsync(BibleTranslationContract<TType> value) => await Task.Run(() => Map(value));
-    public override async Task<BibleTranslationContract<TType>> MapAsync(BibleTranslationEntity<TType> value) => await Task.Run(() => Map(value));
-    public override async Task<IEnumerable<BibleTranslationEntity<TType>>> MapAllAsync(IEnumerable<BibleTranslationContract<TType>> values)
+    public override IEnumerable<BibleTranslationEntity<TType>> MapAll(IEnumerable<BibleTranslationContract> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleTranslationContract> MapAll(IEnumerable<BibleTranslationEntity<TType>> values) => throw new NotImplementedException();
+    public override async Task<BibleTranslationEntity<TType>> MapAsync(BibleTranslationContract value) => await Task.Run(() => Map(value));
+    public override async Task<BibleTranslationContract> MapAsync(BibleTranslationEntity<TType> value) => await Task.Run(() => Map(value));
+    public override async Task<IEnumerable<BibleTranslationEntity<TType>>> MapAllAsync(IEnumerable<BibleTranslationContract> values)
     {
         IList<BibleTranslationEntity<TType>> bibleTranslationEntities = new List<BibleTranslationEntity<TType>>();
 
-        foreach(BibleTranslationContract<TType> bibleTranslationContract in values)
+        foreach(BibleTranslationContract bibleTranslationContract in values)
         {
             bibleTranslationEntities.Add(await MapAsync(bibleTranslationContract));
         }
@@ -37,9 +36,9 @@ public class BibleTranslationMapper<TType> : BaseMapper<TType, BibleTranslationE
         return bibleTranslationEntities;
     }
 
-    public override async Task<IEnumerable<BibleTranslationContract<TType>>> MapAllAsync(IEnumerable<BibleTranslationEntity<TType>> values)
+    public override async Task<IEnumerable<BibleTranslationContract>> MapAllAsync(IEnumerable<BibleTranslationEntity<TType>> values)
     {
-        IList<BibleTranslationContract<TType>> bibleTranslationContracts = new List<BibleTranslationContract<TType>>();
+        IList<BibleTranslationContract> bibleTranslationContracts = new List<BibleTranslationContract>();
 
         foreach(var value in values)
         {

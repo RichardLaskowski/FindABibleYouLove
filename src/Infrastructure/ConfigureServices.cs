@@ -30,11 +30,11 @@ public static class ConfigureServices
 
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
-        services.AddTransient(typeof(IBibleService<string>),              typeof(BibleService));
-        services.AddTransient(typeof(IBibleCategoryService<string>),      typeof(BibleCategoryService));
-        services.AddTransient(typeof(IBibleFeatureService<string>),       typeof(BibleFeatureService));
-        services.AddTransient(typeof(IBibleFormatService<string>),        typeof(BibleFormatService));
-        services.AddTransient(typeof(IBibleTranslationService<string>),   typeof(BibleTranslationService));
+        services.AddTransient(typeof(IBibleService),              typeof(BibleService));
+        services.AddTransient(typeof(IBibleCategoryService),      typeof(BibleCategoryService));
+        services.AddTransient(typeof(IBibleFeatureService),       typeof(BibleFeatureService));
+        services.AddTransient(typeof(IBibleFormatService),        typeof(BibleFormatService));
+        services.AddTransient(typeof(IBibleTranslationService),   typeof(BibleTranslationService));
 
         services.AddTransient(typeof(ICoverService<>),              typeof(CoverService<>));
         services.AddTransient(typeof(ICoverColorService<>),         typeof(CoverColorService<>));

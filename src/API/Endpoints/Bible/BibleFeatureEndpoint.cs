@@ -16,9 +16,9 @@ public class BibleFeatureEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleFeaturesAsync(IBibleFeatureService<string> bibleFeatureService) => Results.Ok(value: await bibleFeatureService.GetAllAsync());
+    internal async Task<IResult> GetBibleFeaturesAsync(IBibleFeatureService bibleFeatureService) => Results.Ok(value: await bibleFeatureService.GetAllAsync());
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFeatureService<string>), implementationType: typeof(BibleFeatureService));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFeatureService), implementationType: typeof(BibleFeatureService));
 }

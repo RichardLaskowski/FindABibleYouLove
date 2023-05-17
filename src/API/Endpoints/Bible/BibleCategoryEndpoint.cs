@@ -19,11 +19,11 @@ public class BibleCategoryEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleCategoriesAsync(IBibleCategoryService<string> bibleCategoryService) => Results.Ok(value: await bibleCategoryService.GetAllAsync());
-    //internal async Task CreateBibleCategoryAsync(IBibleCategoryService<string> bibleCategoryService, BibleCategoryContract<string> bibleCategoryContract) => Results.Ok(value: await bibleCategoryService.CreateAsync(bibleCategoryContract));
+    internal async Task<IResult> GetBibleCategoriesAsync(IBibleCategoryService bibleCategoryService) => Results.Ok(value: await bibleCategoryService.GetAllAsync());
+    //internal async Task CreateBibleCategoryAsync(IBibleCategoryService bibleCategoryService, BibleCategoryContract bibleCategoryContract) => Results.Ok(value: await bibleCategoryService.CreateAsync(bibleCategoryContract));
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleCategoryService<string>), implementationType: typeof(BibleCategoryService));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleCategoryService), implementationType: typeof(BibleCategoryService));
 
 }

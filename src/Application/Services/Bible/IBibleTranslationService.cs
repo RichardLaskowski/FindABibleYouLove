@@ -1,10 +1,6 @@
-using Domain.Common.Interfaces;
+using Domain.Base.Interfaces;
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Application.Services.Bible;
 
-public interface IBibleTranslationService<TType> : IService<TType, BibleTranslationContract<TType>>
-    where TType : class
-{
-
-}
+public interface IBibleTranslationService : IStringBaseService<BibleTranslationContract> { }

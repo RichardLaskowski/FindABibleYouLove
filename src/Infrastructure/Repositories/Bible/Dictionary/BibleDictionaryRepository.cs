@@ -1,9 +1,10 @@
 ﻿using Application.Repositories.Bible;
+using Domain.Base.Classes.Repositories;
 using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleDictionaryRepository : DictionaryRepository<string, BibleEntity<string>> , IBibleRepository<string> 
+public class BibleDictionaryRepository : DictionaryBaseRepository<string, BibleEntity<string>> , IBibleRepository<string> 
 {
     protected Dictionary<string, BibleEntity<string>> BibleDictionary => (Dictionary<string, BibleEntity<string>>)Dictionary;
 

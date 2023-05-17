@@ -1,9 +1,9 @@
-﻿using Domain.Common.Classes;
+﻿using Domain.Base.Classes.Contracts;
 
-namespace Domain.Common.Interfaces;
+namespace Domain.Base.Interfaces;
 
-public interface IService<TType, TContract> 
-    where TType : class 
+public interface IBaseService<TType, TContract>
+    where TType : class
     where TContract : BaseContract<TType>
 {
     Task<TContract> CreateAsync(TContract contract);

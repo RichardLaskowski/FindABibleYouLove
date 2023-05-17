@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-
-using Domain.Common.Classes;
+using Domain.Base.Classes.Contracts;
 
 namespace FindABibleYouLove.Contracts.Ribbon;
 
-public record RibbonDetailContract<TType>(
-    TType RibbonDetailID,
-    IEnumerable<RibbonContract<TType>> Ribbons)
-    : BaseContract<TType>(RibbonDetailID) where TType : class;
+public record RibbonDetailContract(
+    string RibbonDetailId,
+    IEnumerable<RibbonContract> Ribbons)
+    : StringBaseContract(RibbonDetailId);

@@ -1,11 +1,12 @@
 using System.Text.Json;
 
 using Application.Repositories.Bible;
+using Domain.Base.Classes.Repositories;
 using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFeatureDictionaryRepository : DictionaryRepository<string, BibleFeatureEntity<string>>, IBibleFeatureRepository<string> 
+public class BibleFeatureDictionaryRepository : DictionaryBaseRepository<string, BibleFeatureEntity<string>>, IBibleFeatureRepository<string> 
 {
     protected Dictionary<string, BibleFeatureEntity<string>> BibleFeatureDictionary => (Dictionary<string, BibleFeatureEntity<string>>)Dictionary;
 
