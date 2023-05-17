@@ -22,5 +22,5 @@ public class BibleEndpoint : IEndpoint
     #endregion
 
     public void DefineServices(IServiceCollection services)
-    => services.AddSingleton(serviceType: typeof(IBibleRepository<>), implementationType: typeof(BibleDictionaryRepository<>));
+    => services.AddSingleton(serviceType: typeof(IBibleService<string>), implementationType: typeof(BibleService));
 }

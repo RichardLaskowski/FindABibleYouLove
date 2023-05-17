@@ -30,11 +30,11 @@ public static class ConfigureServices
 
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
-        services.AddTransient(typeof(IBibleService<>),              typeof(BibleService<>));
+        services.AddTransient(typeof(IBibleService<string>),              typeof(BibleService));
         services.AddTransient(typeof(IBibleCategoryService<string>),      typeof(BibleCategoryService));
-        services.AddTransient(typeof(IBibleFeatureService<>),       typeof(BibleFeatureService<>));
-        services.AddTransient(typeof(IBibleFormatService<>),        typeof(BibleFormatService<>));
-        services.AddTransient(typeof(IBibleTranslationService<>),   typeof(BibleTranslationService<>));
+        services.AddTransient(typeof(IBibleFeatureService<string>),       typeof(BibleFeatureService));
+        services.AddTransient(typeof(IBibleFormatService<string>),        typeof(BibleFormatService));
+        services.AddTransient(typeof(IBibleTranslationService<string>),   typeof(BibleTranslationService));
 
         services.AddTransient(typeof(ICoverService<>),              typeof(CoverService<>));
         services.AddTransient(typeof(ICoverColorService<>),         typeof(CoverColorService<>));
@@ -51,11 +51,11 @@ public static class ConfigureServices
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
-        services.AddTransient(typeof(IBibleRepository<>),               typeof(BibleDictionaryRepository<>));
+        services.AddTransient(typeof(IBibleRepository<string>),               typeof(BibleDictionaryRepository));
         services.AddTransient(typeof(IBibleCategoryRepository<string>),       typeof(BibleCategoryDictionaryRepository));
-        services.AddTransient(typeof(IBibleFeatureRepository<>),        typeof(BibleFeatureDictionaryRepository<>));
-        services.AddTransient(typeof(IBibleFormatRepository<>),         typeof(BibleFormatDictionaryRepository<>));
-        services.AddTransient(typeof(IBibleTranslationRepository<>),    typeof(BibleTranslationDictionaryRepository<>));
+        services.AddTransient(typeof(IBibleFeatureRepository<string>),        typeof(BibleFeatureDictionaryRepository));
+        services.AddTransient(typeof(IBibleFormatRepository<string>),         typeof(BibleFormatDictionaryRepository));
+        services.AddTransient(typeof(IBibleTranslationRepository<string>),    typeof(BibleTranslationDictionaryRepository));
 
         services.AddTransient(typeof(ICoverRepository<>),               typeof(CoverDictionaryRepository<>));
         services.AddTransient(typeof(ICoverColorRepository<>),          typeof(CoverColorDictionaryRepository<>));

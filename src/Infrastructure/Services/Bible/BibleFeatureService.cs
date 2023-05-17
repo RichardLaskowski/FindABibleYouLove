@@ -9,19 +9,19 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFeatureService<TType> : BaseService<TType, BibleFeatureEntity<TType>, BibleFeatureContract<TType>>, IBibleFeatureService<TType> where TType : class
+public class BibleFeatureService: BaseService<string, BibleFeatureEntity<string>, BibleFeatureContract<string>>, IBibleFeatureService<string> 
 {
-    protected IBibleFeatureRepository<TType> Repository => (IBibleFeatureRepository<TType>)_repo;
-    protected IBibleFeatureMapper<TType> Mapper => (IBibleFeatureMapper<TType>)_mapper;
+    protected IBibleFeatureRepository<string> BibleFeatureRepo => (IBibleFeatureRepository<string>)_repo;
+    protected IBibleFeatureMapper<string> BibleFeatureMapper => (IBibleFeatureMapper<string>)_mapper;
 
-    public BibleFeatureService(IBibleFeatureRepository<TType> repo, IBibleFeatureMapper<TType> mapper) : base(repo, mapper)
+    public BibleFeatureService(IBibleFeatureRepository<string> repo, IBibleFeatureMapper<string> mapper) : base(repo, mapper)
     {
 
     }
 
-    public override Task<BibleFeatureContract<TType>> CreateAsync(BibleFeatureContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, BibleFeatureContract<TType> contract) => throw new NotImplementedException();
-    public override Task<BibleFeatureContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFeatureContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<BibleFeatureContract<string>> CreateAsync(BibleFeatureContract<string> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, BibleFeatureContract<string> contract) => throw new NotImplementedException();
+    public override Task<BibleFeatureContract<string>> GetAsync(string id) => throw new NotImplementedException();
+    public override async Task<IEnumerable<BibleFeatureContract<string>>> GetAllAsync() => await BibleFeatureMapper.MapAllAsync(await BibleFeatureRepo.GetAllAsync());
 }

@@ -3,70 +3,89 @@ using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleTranslationDictionaryRepository<TType> : DictionaryRepository<TType, BibleTranslationEntity<TType>>, IBibleTranslationRepository<TType> where TType : class
+public class BibleTranslationDictionaryRepository : DictionaryRepository<string, BibleTranslationEntity<string>>, IBibleTranslationRepository<string> 
 {
-    protected Dictionary<TType, BibleTranslationEntity<TType>> BibleTranslationDictionary => (Dictionary<TType, BibleTranslationEntity<TType>>)Dictionary;
+    protected Dictionary<string, BibleTranslationEntity<string>> BibleTranslationDictionary => (Dictionary<string, BibleTranslationEntity<string>>)Dictionary;
 
-    public override BibleTranslationEntity<TType> Add(BibleTranslationEntity<TType> entity)
+    public override BibleTranslationEntity<string> Add(BibleTranslationEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleTranslationEntity<TType>> AddRange(IEnumerable<BibleTranslationEntity<TType>> entities)
+    public override IEnumerable<BibleTranslationEntity<string>> AddRange(IEnumerable<BibleTranslationEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleTranslationEntity<TType>> Find(Func<BibleTranslationEntity<TType>, bool> predicate)
+    public override IEnumerable<BibleTranslationEntity<string>> Find(Func<BibleTranslationEntity<string>, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleTranslationEntity<TType>>> FindAsync(Func<BibleTranslationEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<BibleTranslationEntity<string>>> FindAsync(Func<BibleTranslationEntity<string>, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleTranslationEntity<TType> Get(TType id)
+    public override BibleTranslationEntity<string> Get(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleTranslationEntity<TType>> GetAll()
+    public override IEnumerable<BibleTranslationEntity<string>> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleTranslationEntity<TType>>> GetAllAsync()
+    public override async Task<IEnumerable<BibleTranslationEntity<string>>> GetAllAsync() => await Task.Run(() => BibleTranslationDictionary.Values.ToList<BibleTranslationEntity<string>>());
+
+    public override Task<BibleTranslationEntity<string>> GetAsync(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<BibleTranslationEntity<TType>> GetAsync(TType id)
+    public override void Remove(BibleTranslationEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleTranslationEntity<TType> entity)
+    public override void RemoveRange(IEnumerable<BibleTranslationEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleTranslationEntity<TType>> entities)
+    public override void Update(BibleTranslationEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleTranslationEntity<TType> entity)
+    public override void UpdateRange(IEnumerable<BibleTranslationEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleTranslationEntity<TType>> entities)
+    public override void Seed()
     {
-        throw new NotImplementedException();
-    }
+        BibleTranslationEntity<string> christianStandardBible = new(Guid.NewGuid().ToString(),"Christian Standard Bible", "CSB", string.Empty);
+        BibleTranslationEntity<string> englishStandardVersion = new(Guid.NewGuid().ToString(),"English Standard Version", "ESV", string.Empty);
+        BibleTranslationEntity<string> kingJamesVersion = new(Guid.NewGuid().ToString(),"King James Version", "KJV", string.Empty);
+        BibleTranslationEntity<string> newAmericanStandardBible = new(Guid.NewGuid().ToString(),"New American Standard Bible", "NASB", string.Empty);
+        BibleTranslationEntity<string> newEnglishTranslation = new(Guid.NewGuid().ToString(),"New English Translation", "NET", string.Empty);
+        BibleTranslationEntity<string> newInternationalVersion = new(Guid.NewGuid().ToString(),"New International Version", "NIV", string.Empty);
+        BibleTranslationEntity<string> newKingJamesVersion = new(Guid.NewGuid().ToString(),"New King James Version", "NKJV", string.Empty);
+        BibleTranslationEntity<string> newLivingTranslation = new(Guid.NewGuid().ToString(),"New Living Translation", "NLT", string.Empty);
+        BibleTranslationEntity<string> newRevisedStandardVersion = new(Guid.NewGuid().ToString(),"New Revised Standard Version", "NRSV", string.Empty);
 
-    public override void Seed() => throw new NotImplementedException();
+        BibleTranslationDictionary[christianStandardBible.BibleTranslationID] = christianStandardBible;               
+        BibleTranslationDictionary[englishStandardVersion.BibleTranslationID] = englishStandardVersion;               
+        BibleTranslationDictionary[kingJamesVersion.BibleTranslationID] = kingJamesVersion;       
+        BibleTranslationDictionary[newAmericanStandardBible.BibleTranslationID] = newAmericanStandardBible;               
+        BibleTranslationDictionary[newEnglishTranslation.BibleTranslationID] = newEnglishTranslation;           
+        BibleTranslationDictionary[newInternationalVersion.BibleTranslationID] = newInternationalVersion;               
+        BibleTranslationDictionary[newKingJamesVersion.BibleTranslationID] = newKingJamesVersion;           
+        BibleTranslationDictionary[newLivingTranslation.BibleTranslationID] = newLivingTranslation;           
+        BibleTranslationDictionary[newRevisedStandardVersion.BibleTranslationID] = newRevisedStandardVersion;               
+
+    }
 }
 

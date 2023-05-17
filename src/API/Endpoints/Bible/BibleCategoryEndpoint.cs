@@ -1,11 +1,6 @@
-using System;
 using System.Threading.Tasks;
 
 using Application.Services.Bible;
-
-using Domain.Entities.Bible;
-
-using FindABibleYouLove.Contracts.Bible;
 
 using Infrastructure.Repositories.Bible;
 
@@ -25,7 +20,7 @@ public class BibleCategoryEndpoint : IEndpoint
     #region Route Handlers
 
     internal async Task<IResult> GetBibleCategoriesAsync(IBibleCategoryService<string> bibleCategoryService) => Results.Ok(value: await bibleCategoryService.GetAllAsync());
-    internal async Task CreateBibleCategoryAsync(IBibleCategoryService<string> bibleCategoryService, BibleCategoryContract<string> bibleCategoryContract) => Results.Ok(value: await bibleCategoryService.CreateAsync(bibleCategoryContract));
+    //internal async Task CreateBibleCategoryAsync(IBibleCategoryService<string> bibleCategoryService, BibleCategoryContract<string> bibleCategoryContract) => Results.Ok(value: await bibleCategoryService.CreateAsync(bibleCategoryContract));
 
     #endregion
 

@@ -1,7 +1,5 @@
 ﻿using System.Threading.Tasks;
-
-using Application.Repositories.Bible;
-
+using Application.Services.Bible;
 using Infrastructure.Repositories.Bible;
 
 using Microsoft.AspNetCore.Builder;
@@ -12,13 +10,13 @@ namespace API.Endpoints.Bible;
 
 public class BibleTranslationEndpoint : IEndpoint
 {
-    public void DefineEndpoints(WebApplication app) => app.MapGet(pattern: "bible/translations", handler: GetBibleTranslationAsync);
+    public void DefineEndpoints(WebApplication app) => app.MapGet(pattern: "bible/translations", handler: GetBibleTranslationsAsync);
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleTranslationAsync(IBibleTranslationRepository<string> repo) => Results.Ok(value: await repo.GetAllAsync());
+    internal async Task<IResult> GetBibleTranslationsAsync(IBibleTranslationService<string> bibleTranslationService) => Results.Ok(value: await bibleTranslationService.GetAllAsync());
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleTranslationRepository<>), implementationType: typeof(BibleTranslationDictionaryRepository<>));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleTranslationService<string>), implementationType: typeof(BibleTranslationService));
 }

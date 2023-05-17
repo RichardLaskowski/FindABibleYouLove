@@ -7,21 +7,23 @@ using Domain.Entities.Bible;
 
 using FindABibleYouLove.Contracts.Bible;
 
+using Infrastructure.Mappers.Bible;
+
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFormatService<TType> : BaseService<TType, BibleFormatEntity<TType>, BibleFormatContract<TType>>, IBibleFormatService<TType> where TType : class
+public class BibleFormatService : BaseService<string, BibleFormatEntity<string>, BibleFormatContract<string>>, IBibleFormatService<string> 
 {
-    protected IBibleFormatRepository<TType> Repository => (IBibleFormatRepository<TType>)_repo;
-    protected IBibleFormatMapper<TType> Mapper => (IBibleFormatMapper<TType>)_mapper;
+    protected IBibleFormatRepository<string> BibleFormatRepo => (IBibleFormatRepository<string>)_repo;
+    protected IBibleFormatMapper<string> BibleFormatMapper => (IBibleFormatMapper<string>)_mapper;
 
-    public BibleFormatService(IBibleFormatRepository<TType> repo, IBibleFormatMapper<TType> mapper) : base(repo, mapper)
+    public BibleFormatService(IBibleFormatRepository<string> repo, IBibleFormatMapper<string> mapper) : base(repo, mapper)
     {
 
     }
 
-    public override Task<BibleFormatContract<TType>> CreateAsync(BibleFormatContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, BibleFormatContract<TType> contract) => throw new NotImplementedException();
-    public override Task<BibleFormatContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleFormatContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<BibleFormatContract<string>> CreateAsync(BibleFormatContract<string> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, BibleFormatContract<string> contract) => throw new NotImplementedException();
+    public override Task<BibleFormatContract<string>> GetAsync(string id) => throw new NotImplementedException();
+    public override async Task<IEnumerable<BibleFormatContract<string>>> GetAllAsync() => await BibleFormatMapper.MapAllAsync(await BibleFormatRepo.GetAllAsync());
 }

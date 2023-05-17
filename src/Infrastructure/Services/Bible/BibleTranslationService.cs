@@ -9,19 +9,19 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleTranslationService<TType> : BaseService<TType, BibleTranslationEntity<TType>, BibleTranslationContract<TType>>, IBibleTranslationService<TType> where TType : class
+public class BibleTranslationService : BaseService<string, BibleTranslationEntity<string>, BibleTranslationContract<string>>, IBibleTranslationService<string> 
 {
-    protected IBibleTranslationRepository<TType> Repository => (IBibleTranslationRepository<TType>)_repo;
-    protected IBibleTranslationMapper<TType> Mapper => (IBibleTranslationMapper<TType>)_mapper;
+    protected IBibleTranslationRepository<string> BibleTranslationRepo => (IBibleTranslationRepository<string>)_repo;
+    protected IBibleTranslationMapper<string> BibleTranslationMapper => (IBibleTranslationMapper<string>)_mapper;
 
-    public BibleTranslationService(IBibleTranslationRepository<TType> repo, IBibleTranslationMapper<TType> mapper) : base(repo, mapper)
+    public BibleTranslationService(IBibleTranslationRepository<string> bibleTranslationRepo, IBibleTranslationMapper<string> bibleTranslationMapper) : base(bibleTranslationRepo, bibleTranslationMapper)
     {
 
     }
 
-    public override Task<BibleTranslationContract<TType>> CreateAsync(BibleTranslationContract<TType> contract) => throw new NotImplementedException();
-    public override Task DeleteAsync(TType id) => throw new NotImplementedException();
-    public override Task UpdateAsync(TType id, BibleTranslationContract<TType> contract) => throw new NotImplementedException();
-    public override Task<BibleTranslationContract<TType>> GetAsync(TType id) => throw new NotImplementedException();
-    public override Task<IEnumerable<BibleTranslationContract<TType>>> GetAllAsync() => throw new NotImplementedException();
+    public override Task<BibleTranslationContract<string>> CreateAsync(BibleTranslationContract<string> contract) => throw new NotImplementedException();
+    public override Task DeleteAsync(string id) => throw new NotImplementedException();
+    public override Task UpdateAsync(string id, BibleTranslationContract<string> contract) => throw new NotImplementedException();
+    public override Task<BibleTranslationContract<string>> GetAsync(string id) => throw new NotImplementedException();
+    public override async Task<IEnumerable<BibleTranslationContract<string>>> GetAllAsync() => await BibleTranslationMapper.MapAllAsync(await BibleTranslationRepo.GetAllAsync());
 }

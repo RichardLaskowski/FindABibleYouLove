@@ -1,72 +1,85 @@
+using System.Text.Json;
+
 using Application.Repositories.Bible;
 using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFeatureDictionaryRepository<TType> : DictionaryRepository<TType, BibleFeatureEntity<TType>>, IBibleFeatureRepository<TType> where TType : class
+public class BibleFeatureDictionaryRepository : DictionaryRepository<string, BibleFeatureEntity<string>>, IBibleFeatureRepository<string> 
 {
-    protected Dictionary<TType, BibleFeatureEntity<TType>> BibleFeatureDictionary => (Dictionary<TType, BibleFeatureEntity<TType>>)Dictionary;
+    protected Dictionary<string, BibleFeatureEntity<string>> BibleFeatureDictionary => (Dictionary<string, BibleFeatureEntity<string>>)Dictionary;
 
-    public override BibleFeatureEntity<TType> Add(BibleFeatureEntity<TType> entity)
+    public override BibleFeatureEntity<string> Add(BibleFeatureEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<TType>> AddRange(IEnumerable<BibleFeatureEntity<TType>> entities)
+    public override IEnumerable<BibleFeatureEntity<string>> AddRange(IEnumerable<BibleFeatureEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<TType>> Find(Func<BibleFeatureEntity<TType>, bool> predicate)
+    public override IEnumerable<BibleFeatureEntity<string>> Find(Func<BibleFeatureEntity<string>, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleFeatureEntity<TType>>> FindAsync(Func<BibleFeatureEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<BibleFeatureEntity<string>>> FindAsync(Func<BibleFeatureEntity<string>, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleFeatureEntity<TType> Get(TType id)
+    public override BibleFeatureEntity<string> Get(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<TType>> GetAll()
+    public override IEnumerable<BibleFeatureEntity<string>> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleFeatureEntity<TType>>> GetAllAsync()
+    public override async Task<IEnumerable<BibleFeatureEntity<string>>> GetAllAsync()
+    {
+        return await Task.Run(() => BibleFeatureDictionary.Values.ToList());
+    }
+
+    public override Task<BibleFeatureEntity<string>> GetAsync(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<BibleFeatureEntity<TType>> GetAsync(TType id)
+    public override void Remove(BibleFeatureEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleFeatureEntity<TType> entity)
+    public override void RemoveRange(IEnumerable<BibleFeatureEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleFeatureEntity<TType>> entities)
+    public override void Update(BibleFeatureEntity<string> entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleFeatureEntity<TType> entity)
+    public override void UpdateRange(IEnumerable<BibleFeatureEntity<string>> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleFeatureEntity<TType>> entities)
+    public override void Seed()
     {
-        throw new NotImplementedException();
-    }
+        string jsonPath = "../../docs/data/Bible/";
+        string fileName = "BibleFeatures.json";
+        string jsonString = File.ReadAllText(jsonPath + fileName);
+        List<BibleFeatureEntity<string>> bibleFeatureEntities = JsonSerializer.Deserialize<List<BibleFeatureEntity<string>>>(jsonString)!;
 
-    public override void Seed() => throw new NotImplementedException();
+        foreach (BibleFeatureEntity<string> bibleFeatureEntity in  bibleFeatureEntities)
+        {
+            BibleFeatureDictionary[Guid.NewGuid().ToString()] = bibleFeatureEntity;
+        }
+    }
 }
 

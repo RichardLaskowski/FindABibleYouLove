@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 using Application.Repositories.Bible;
+using Application.Services.Bible;
 
 using Infrastructure.Repositories.Bible;
 
@@ -20,5 +21,5 @@ public class BibleFormatEndpoint : IEndpoint
 
     #endregion
 
-    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFormatRepository<>), implementationType: typeof(BibleFormatDictionaryRepository<>));
+    public void DefineServices(IServiceCollection services) => services.AddSingleton(serviceType: typeof(IBibleFormatService<string>), implementationType: typeof(BibleFormatService));
 }
