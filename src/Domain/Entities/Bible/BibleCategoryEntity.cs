@@ -16,9 +16,9 @@ public class BibleCategoryEntity : StringBaseEntity
     }
 
     public BibleCategoryEntity(
-        string bibleCategoryId,
+        string BibleCategoryId,
         string categoryName,
-        string categoryDescription) : base(stringId: bibleCategoryId)
+        string categoryDescription) : base(stringId: BibleCategoryId)
     {
         CategoryName        = categoryName;
         CategoryDescription = categoryDescription;

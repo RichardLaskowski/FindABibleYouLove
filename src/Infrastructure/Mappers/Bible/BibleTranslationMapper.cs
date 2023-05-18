@@ -6,27 +6,25 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleTranslationMapper<TType> : BaseMapper<TType, BibleTranslationEntity<TType>, BibleTranslationContract>, IBibleTranslationMapper<TType> where TType : class
+public class BibleTranslationMapper : StringBaseMapper<BibleTranslationEntity, BibleTranslationContract>, IBibleTranslationMapper
 {
-    public override BibleTranslationEntity<TType> Map(BibleTranslationContract bibleTranslationContract) => new(
-        bibleTranslationContract.BibleTranslationID,
+    public override BibleTranslationEntity Map(BibleTranslationContract bibleTranslationContract) => new(
+        bibleTranslationContract.BibleTranslationId,
         bibleTranslationContract.TranslationName,
-        bibleTranslationContract.TranslationAbbreviation,
-        bibleTranslationContract.TranslationDescription);
+        bibleTranslationContract.TranslationAbbreviation);
 
-    public override BibleTranslationContract Map(BibleTranslationEntity<TType> bibleTranslationEntity) => new(
-        bibleTranslationEntity.BibleTranslationID,
+    public override BibleTranslationContract Map(BibleTranslationEntity bibleTranslationEntity) => new(
+        bibleTranslationEntity.BibleTranslationId,
         bibleTranslationEntity.TranslationName,
-        bibleTranslationEntity.TranslationAbbreviation,
-        bibleTranslationEntity.TranslationDescription);
+        bibleTranslationEntity.TranslationAbbreviation);
 
-    public override IEnumerable<BibleTranslationEntity<TType>> MapAll(IEnumerable<BibleTranslationContract> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleTranslationContract> MapAll(IEnumerable<BibleTranslationEntity<TType>> values) => throw new NotImplementedException();
-    public override async Task<BibleTranslationEntity<TType>> MapAsync(BibleTranslationContract value) => await Task.Run(() => Map(value));
-    public override async Task<BibleTranslationContract> MapAsync(BibleTranslationEntity<TType> value) => await Task.Run(() => Map(value));
-    public override async Task<IEnumerable<BibleTranslationEntity<TType>>> MapAllAsync(IEnumerable<BibleTranslationContract> values)
+    public override IEnumerable<BibleTranslationEntity> MapAll(IEnumerable<BibleTranslationContract> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleTranslationContract> MapAll(IEnumerable<BibleTranslationEntity> values) => throw new NotImplementedException();
+    public override async Task<BibleTranslationEntity> MapAsync(BibleTranslationContract value) => await Task.Run(() => Map(value));
+    public override async Task<BibleTranslationContract> MapAsync(BibleTranslationEntity value) => await Task.Run(() => Map(value));
+    public override async Task<IEnumerable<BibleTranslationEntity>> MapAllAsync(IEnumerable<BibleTranslationContract> values)
     {
-        IList<BibleTranslationEntity<TType>> bibleTranslationEntities = new List<BibleTranslationEntity<TType>>();
+        IList<BibleTranslationEntity> bibleTranslationEntities = new List<BibleTranslationEntity>();
 
         foreach(BibleTranslationContract bibleTranslationContract in values)
         {
@@ -36,7 +34,7 @@ public class BibleTranslationMapper<TType> : BaseMapper<TType, BibleTranslationE
         return bibleTranslationEntities;
     }
 
-    public override async Task<IEnumerable<BibleTranslationContract>> MapAllAsync(IEnumerable<BibleTranslationEntity<TType>> values)
+    public override async Task<IEnumerable<BibleTranslationContract>> MapAllAsync(IEnumerable<BibleTranslationEntity> values)
     {
         IList<BibleTranslationContract> bibleTranslationContracts = new List<BibleTranslationContract>();
 

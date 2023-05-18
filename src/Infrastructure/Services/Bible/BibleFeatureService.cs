@@ -8,10 +8,10 @@ namespace Infrastructure.Repositories.Bible;
 
 public class BibleFeatureService: StringBaseService<BibleFeatureContract>, IBibleFeatureService 
 {
-    protected IBibleFeatureRepository<string> BibleFeatureRepo => (IBibleFeatureRepository<string>)_repo;
-    protected IBibleFeatureMapper<string> BibleFeatureMapper => (IBibleFeatureMapper<string>)_mapper;
+    protected IBibleFeatureRepository BibleFeatureRepo => (IBibleFeatureRepository)_repo;
+    protected IBibleFeatureMapper BibleFeatureMapper => (IBibleFeatureMapper)_mapper;
 
-    public BibleFeatureService(IBibleFeatureRepository<string> repo, IBibleFeatureMapper<string> mapper) : base(repo, mapper)
+    public BibleFeatureService(IBibleFeatureRepository repo, IBibleFeatureMapper mapper) : base(repo, mapper)
     {
 
     }

@@ -4,6 +4,5 @@ namespace FindABibleYouLove.Contracts.Bible;
 
 public record BibleFeatureContract(
     string BibleFeatureId,
-    string FeatureName,
-    string FeatureDescription) 
+    string FeatureName) 
     : StringBaseContract(BibleFeatureId); 

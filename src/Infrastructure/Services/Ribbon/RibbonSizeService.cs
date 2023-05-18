@@ -10,9 +10,9 @@ namespace Infrastructure.Repositories.Ribbon;
 public class RibbonSizeService : StringBaseService<RibbonSizeContract>, IRibbonSizeService
 {
     protected IRibbonSizeRepository<TType> Repository => (IRibbonSizeRepository<TType>)_repo;
-    protected IRibbonSizeMapper<TType> Mapper => (IRibbonSizeMapper<TType>)_mapper;
+    protected IRibbonSizeMapper Mapper => (IRibbonSizeMapper)_mapper;
 
-    public RibbonSizeService(IRibbonSizeRepository<TType> repo, IRibbonSizeMapper<TType> mapper) : base(repo, mapper)
+    public RibbonSizeService(IRibbonSizeRepository<TType> repo, IRibbonSizeMapper mapper) : base(repo, mapper)
     {
 
     }

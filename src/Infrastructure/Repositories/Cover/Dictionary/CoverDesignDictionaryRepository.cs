@@ -4,66 +4,66 @@ using Domain.Entities.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverDesignDictionaryRepository<TType> : DictionaryBaseRepository<TType, CoverDesignEntity<TType>>, ICoverDesignRepository<TType> where TType : class
+public class CoverDesignDictionaryRepository<TType> : DictionaryBaseRepository<TType, CoverDesignEntity>, ICoverDesignRepository<TType> where TType : class
 {
-    protected Dictionary<TType, CoverDesignEntity<TType>> CoverDesignDictionary => (Dictionary<TType, CoverDesignEntity<TType>>)Dictionary;
+    protected Dictionary<TType, CoverDesignEntity> CoverDesignDictionary => (Dictionary<TType, CoverDesignEntity>)Dictionary;
 
-    public override CoverDesignEntity<TType> Add(CoverDesignEntity<TType> entity)
+    public override CoverDesignEntity Add(CoverDesignEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<CoverDesignEntity<TType>> AddRange(IEnumerable<CoverDesignEntity<TType>> entities)
+    public override IEnumerable<CoverDesignEntity> AddRange(IEnumerable<CoverDesignEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<CoverDesignEntity<TType>> Find(Func<CoverDesignEntity<TType>, bool> predicate)
+    public override IEnumerable<CoverDesignEntity> Find(Func<CoverDesignEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<CoverDesignEntity<TType>>> FindAsync(Func<CoverDesignEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<CoverDesignEntity>> FindAsync(Func<CoverDesignEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override CoverDesignEntity<TType> Get(TType id)
+    public override CoverDesignEntity Get(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<CoverDesignEntity<TType>> GetAll()
+    public override IEnumerable<CoverDesignEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<CoverDesignEntity<TType>>> GetAllAsync()
+    public override Task<IEnumerable<CoverDesignEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<CoverDesignEntity<TType>> GetAsync(TType id)
+    public override Task<CoverDesignEntity> GetAsync(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(CoverDesignEntity<TType> entity)
+    public override void Remove(CoverDesignEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<CoverDesignEntity<TType>> entities)
+    public override void RemoveRange(IEnumerable<CoverDesignEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(CoverDesignEntity<TType> entity)
+    public override void Update(CoverDesignEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<CoverDesignEntity<TType>> entities)
+    public override void UpdateRange(IEnumerable<CoverDesignEntity> entities)
     {
         throw new NotImplementedException();
     }

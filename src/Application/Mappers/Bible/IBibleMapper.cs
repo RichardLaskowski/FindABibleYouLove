@@ -1,10 +1,8 @@
-﻿using Domain.Base.Interfaces;
+﻿using Domain.Base.Interfaces.Mappers;
 using Domain.Entities.Bible;
 
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Application.Mappers.Bible;
 
-public interface IBibleMapper<TType> : IBaseMapper<BibleEntity<TType>, BibleContract> where TType : class
-{
-}
+public interface IBibleMapper : IStringBaseMapper<BibleEntity, BibleContract> { }

@@ -1,9 +1,9 @@
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Repositories;
 using Domain.Entities.Bible;
 
 namespace Application.Repositories.Bible;
 
-public interface IBibleFormatRepository<TType> : IBaseRepository<TType, BibleFormatEntity<TType>> where TType : class
+public interface IBibleFormatRepository: IStringBaseRepository<BibleFormatEntity>
 {
 
 }

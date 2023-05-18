@@ -4,7 +4,7 @@ using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleTranslationDictionaryRepository : DictionaryBaseRepository<string, BibleTranslationEntity<string>>, IBibleTranslationRepository<string> 
+public class BibleTranslationDictionaryRepository : DictionaryBaseRepository<string, BibleTranslationEntity<string>>, IBibleTranslationRepository 
 {
     protected Dictionary<string, BibleTranslationEntity<string>> BibleTranslationDictionary => (Dictionary<string, BibleTranslationEntity<string>>)Dictionary;
 
@@ -77,15 +77,15 @@ public class BibleTranslationDictionaryRepository : DictionaryBaseRepository<str
         BibleTranslationEntity<string> newLivingTranslation = new(Guid.NewGuid().ToString(),"New Living Translation", "NLT", string.Empty);
         BibleTranslationEntity<string> newRevisedStandardVersion = new(Guid.NewGuid().ToString(),"New Revised Standard Version", "NRSV", string.Empty);
 
-        BibleTranslationDictionary[christianStandardBible.BibleTranslationID] = christianStandardBible;               
-        BibleTranslationDictionary[englishStandardVersion.BibleTranslationID] = englishStandardVersion;               
-        BibleTranslationDictionary[kingJamesVersion.BibleTranslationID] = kingJamesVersion;       
-        BibleTranslationDictionary[newAmericanStandardBible.BibleTranslationID] = newAmericanStandardBible;               
-        BibleTranslationDictionary[newEnglishTranslation.BibleTranslationID] = newEnglishTranslation;           
-        BibleTranslationDictionary[newInternationalVersion.BibleTranslationID] = newInternationalVersion;               
-        BibleTranslationDictionary[newKingJamesVersion.BibleTranslationID] = newKingJamesVersion;           
-        BibleTranslationDictionary[newLivingTranslation.BibleTranslationID] = newLivingTranslation;           
-        BibleTranslationDictionary[newRevisedStandardVersion.BibleTranslationID] = newRevisedStandardVersion;               
+        BibleTranslationDictionary[christianStandardBible.BibleTranslationId] = christianStandardBible;               
+        BibleTranslationDictionary[englishStandardVersion.BibleTranslationId] = englishStandardVersion;               
+        BibleTranslationDictionary[kingJamesVersion.BibleTranslationId] = kingJamesVersion;       
+        BibleTranslationDictionary[newAmericanStandardBible.BibleTranslationId] = newAmericanStandardBible;               
+        BibleTranslationDictionary[newEnglishTranslation.BibleTranslationId] = newEnglishTranslation;           
+        BibleTranslationDictionary[newInternationalVersion.BibleTranslationId] = newInternationalVersion;               
+        BibleTranslationDictionary[newKingJamesVersion.BibleTranslationId] = newKingJamesVersion;           
+        BibleTranslationDictionary[newLivingTranslation.BibleTranslationId] = newLivingTranslation;           
+        BibleTranslationDictionary[newRevisedStandardVersion.BibleTranslationId] = newRevisedStandardVersion;               
 
     }
 }

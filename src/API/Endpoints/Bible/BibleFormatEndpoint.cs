@@ -17,7 +17,7 @@ public class BibleFormatEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleFormatsAsync(IBibleFormatRepository<string> repo) => Results.Ok(value: await repo.GetAllAsync());
+    internal async Task<IResult> GetBibleFormatsAsync(IBibleFormatRepository repo) => Results.Ok(value: await repo.GetAllAsync());
 
     #endregion
 

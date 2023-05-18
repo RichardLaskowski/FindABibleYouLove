@@ -1,6 +1,6 @@
 ﻿using Domain.Base.Classes.Entities;
 
-namespace Domain.Base.Interfaces;
+namespace Domain.Base.Interfaces.Repositories;
 
 public interface IBaseRepository<TType, TEntity>
     where TType : class

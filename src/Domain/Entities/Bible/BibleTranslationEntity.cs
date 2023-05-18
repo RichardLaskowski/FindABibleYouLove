@@ -17,9 +17,9 @@ public class BibleTranslationEntity : StringBaseEntity
     }
 
     public BibleTranslationEntity(
-        string bibleTranslationId,
+        string BibleTranslationId,
         string translationName,
-        string translationAbbreviation) : base(bibleTranslationId)
+        string translationAbbreviation) : base(BibleTranslationId)
     {
         TranslationName         = translationName;
         TranslationAbbreviation = translationAbbreviation;

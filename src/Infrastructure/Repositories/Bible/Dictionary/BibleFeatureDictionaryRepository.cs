@@ -6,66 +6,66 @@ using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFeatureDictionaryRepository : DictionaryBaseRepository<string, BibleFeatureEntity<string>>, IBibleFeatureRepository<string> 
+public class BibleFeatureDictionaryRepository : DictionaryBaseRepository<string, BibleFeatureEntity>, IBibleFeatureRepository 
 {
-    protected Dictionary<string, BibleFeatureEntity<string>> BibleFeatureDictionary => (Dictionary<string, BibleFeatureEntity<string>>)Dictionary;
+    protected Dictionary<string, BibleFeatureEntity> BibleFeatureDictionary => (Dictionary<string, BibleFeatureEntity>)Dictionary;
 
-    public override BibleFeatureEntity<string> Add(BibleFeatureEntity<string> entity)
+    public override BibleFeatureEntity Add(BibleFeatureEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<string>> AddRange(IEnumerable<BibleFeatureEntity<string>> entities)
+    public override IEnumerable<BibleFeatureEntity> AddRange(IEnumerable<BibleFeatureEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<string>> Find(Func<BibleFeatureEntity<string>, bool> predicate)
+    public override IEnumerable<BibleFeatureEntity> Find(Func<BibleFeatureEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleFeatureEntity<string>>> FindAsync(Func<BibleFeatureEntity<string>, bool> predicate)
+    public override Task<IEnumerable<BibleFeatureEntity>> FindAsync(Func<BibleFeatureEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleFeatureEntity<string> Get(string id)
+    public override BibleFeatureEntity Get(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFeatureEntity<string>> GetAll()
+    public override IEnumerable<BibleFeatureEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override async Task<IEnumerable<BibleFeatureEntity<string>>> GetAllAsync()
+    public override async Task<IEnumerable<BibleFeatureEntity>> GetAllAsync()
     {
         return await Task.Run(() => BibleFeatureDictionary.Values.ToList());
     }
 
-    public override Task<BibleFeatureEntity<string>> GetAsync(string id)
+    public override Task<BibleFeatureEntity> GetAsync(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleFeatureEntity<string> entity)
+    public override void Remove(BibleFeatureEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleFeatureEntity<string>> entities)
+    public override void RemoveRange(IEnumerable<BibleFeatureEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleFeatureEntity<string> entity)
+    public override void Update(BibleFeatureEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleFeatureEntity<string>> entities)
+    public override void UpdateRange(IEnumerable<BibleFeatureEntity> entities)
     {
         throw new NotImplementedException();
     }
@@ -75,9 +75,9 @@ public class BibleFeatureDictionaryRepository : DictionaryBaseRepository<string,
         string jsonPath = "../../docs/data/Bible/";
         string fileName = "BibleFeatures.json";
         string jsonString = File.ReadAllText(jsonPath + fileName);
-        List<BibleFeatureEntity<string>> bibleFeatureEntities = JsonSerializer.Deserialize<List<BibleFeatureEntity<string>>>(jsonString)!;
+        List<BibleFeatureEntity> bibleFeatureEntities = JsonSerializer.Deserialize<List<BibleFeatureEntity>>(jsonString)!;
 
-        foreach (BibleFeatureEntity<string> bibleFeatureEntity in  bibleFeatureEntities)
+        foreach (BibleFeatureEntity bibleFeatureEntity in  bibleFeatureEntities)
         {
             BibleFeatureDictionary[Guid.NewGuid().ToString()] = bibleFeatureEntity;
         }

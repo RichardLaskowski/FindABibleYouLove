@@ -4,66 +4,66 @@ using Domain.Entities.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonColorDictionaryRepository<TType> : DictionaryBaseRepository<TType, RibbonColorEntity<TType>>, IRibbonColorRepository<TType> where TType : class
+public class RibbonColorDictionaryRepository<TType> : DictionaryBaseRepository<TType, RibbonColorEntity>, IRibbonColorRepository<TType> where TType : class
 {
-    protected Dictionary<TType, RibbonColorEntity<TType>> RibbonColorDictionary => (Dictionary<TType, RibbonColorEntity<TType>>)Dictionary;
+    protected Dictionary<TType, RibbonColorEntity> RibbonColorDictionary => (Dictionary<TType, RibbonColorEntity>)Dictionary;
 
-    public override RibbonColorEntity<TType> Add(RibbonColorEntity<TType> entity)
+    public override RibbonColorEntity Add(RibbonColorEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonColorEntity<TType>> AddRange(IEnumerable<RibbonColorEntity<TType>> entities)
+    public override IEnumerable<RibbonColorEntity> AddRange(IEnumerable<RibbonColorEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonColorEntity<TType>> Find(Func<RibbonColorEntity<TType>, bool> predicate)
+    public override IEnumerable<RibbonColorEntity> Find(Func<RibbonColorEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<RibbonColorEntity<TType>>> FindAsync(Func<RibbonColorEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<RibbonColorEntity>> FindAsync(Func<RibbonColorEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override RibbonColorEntity<TType> Get(TType id)
+    public override RibbonColorEntity Get(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonColorEntity<TType>> GetAll()
+    public override IEnumerable<RibbonColorEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<RibbonColorEntity<TType>>> GetAllAsync()
+    public override Task<IEnumerable<RibbonColorEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<RibbonColorEntity<TType>> GetAsync(TType id)
+    public override Task<RibbonColorEntity> GetAsync(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(RibbonColorEntity<TType> entity)
+    public override void Remove(RibbonColorEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<RibbonColorEntity<TType>> entities)
+    public override void RemoveRange(IEnumerable<RibbonColorEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(RibbonColorEntity<TType> entity)
+    public override void Update(RibbonColorEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<RibbonColorEntity<TType>> entities)
+    public override void UpdateRange(IEnumerable<RibbonColorEntity> entities)
     {
         throw new NotImplementedException();
     }

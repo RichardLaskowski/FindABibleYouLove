@@ -1,6 +1,6 @@
 ﻿using Domain.Base.Classes.Contracts;
 
-namespace Domain.Base.Interfaces;
+namespace Domain.Base.Interfaces.Services;
 
 public interface IBaseService<TType, TContract>
     where TType : class

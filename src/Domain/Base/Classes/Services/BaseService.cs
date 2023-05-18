@@ -1,6 +1,8 @@
 ﻿using Domain.Base.Classes.Contracts;
 using Domain.Base.Classes.Entities;
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Mappers;
+using Domain.Base.Interfaces.Repositories;
+using Domain.Base.Interfaces.Services;
 
 namespace Domain.Base.Classes.Services;
 
@@ -10,9 +12,9 @@ public abstract class BaseService<TType, TEntity, TContract> : IBaseService<TTyp
     where TContract : BaseContract<TType>
 {
     protected IBaseRepository<TType, TEntity> _repo;
-    protected IBaseMapper<TEntity, TContract> _mapper;
+    protected IBaseMapper<TType, TEntity, TContract> _mapper;
 
-    public BaseService(IBaseRepository<TType, TEntity> repo, IBaseMapper<TEntity, TContract> mapper)
+    public BaseService(IBaseRepository<TType, TEntity> repo, IBaseMapper<TType, TEntity, TContract> mapper)
     {
         _repo = repo;
         _mapper = mapper;

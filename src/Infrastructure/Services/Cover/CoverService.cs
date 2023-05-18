@@ -9,9 +9,9 @@ namespace Infrastructure.Repositories.Cover;
 public class CoverService : StringBaseService<CoverContract>, ICoverService
 {
     protected ICoverRepository<TType> Repository => (ICoverRepository<TType>)_repo;
-    protected ICoverMapper<TType> Mapper => (ICoverMapper<TType>)_mapper;
+    protected ICoverMapper Mapper => (ICoverMapper)_mapper;
 
-    public CoverService(ICoverRepository<TType> repo, ICoverMapper<TType> mapper) : base(repo, mapper)
+    public CoverService(ICoverRepository<TType> repo, ICoverMapper mapper) : base(repo, mapper)
     {
 
     }

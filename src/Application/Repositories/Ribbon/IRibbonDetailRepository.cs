@@ -1,9 +1,9 @@
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Repositories;
 using Domain.Entities.Ribbon;
 
 namespace Application.Repositories.Ribbon;
 
-public interface IRibbonDetailRepository<TType> : IBaseRepository<TType, RibbonDetailEntity<TType>> where TType : class
+public interface IRibbonDetailRepository: IStringBaseRepository<RibbonDetailEntity>
 {
 
 }

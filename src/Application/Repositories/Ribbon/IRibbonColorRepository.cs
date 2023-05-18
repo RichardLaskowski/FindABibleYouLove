@@ -1,9 +1,9 @@
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Repositories;
 using Domain.Entities.Ribbon;
 
 namespace Application.Repositories.Ribbon;
 
-public interface IRibbonColorRepository<TType> : IBaseRepository<TType, RibbonColorEntity<TType>> where TType : class
+public interface IRibbonColorRepository: IStringBaseRepository<RibbonColorEntity>
 {
 
 }

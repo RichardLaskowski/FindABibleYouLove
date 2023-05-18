@@ -14,8 +14,8 @@ public class BibleFeatureEntity : StringBaseEntity
     }
 
     public BibleFeatureEntity(
-        string bibleFeatureId,
-        string featureName) : base(bibleFeatureId)
+        string BibleFeatureId,
+        string featureName) : base(BibleFeatureId)
     {
         FeatureName         = featureName;
     }

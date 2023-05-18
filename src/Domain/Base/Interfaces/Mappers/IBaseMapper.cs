@@ -1,12 +1,12 @@
 ﻿using Domain.Base.Classes.Contracts;
 using Domain.Base.Classes.Entities;
 
-namespace Domain.Base.Interfaces;
+namespace Domain.Base.Interfaces.Mappers;
 
 public interface IBaseMapper<TType, TEntity, TContract>
     where TType : class
     where TEntity : BaseEntity<TType>
-    where TContract: BaseContract<TType>
+    where TContract : BaseContract<TType>
 {
     TEntity Map(TContract contract);
     TContract Map(TEntity entity);

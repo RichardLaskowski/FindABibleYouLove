@@ -1,4 +1,4 @@
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Services;
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Application.Services.Cover;

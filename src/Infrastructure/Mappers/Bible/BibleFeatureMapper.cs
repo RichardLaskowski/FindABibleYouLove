@@ -6,25 +6,25 @@ using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Mappers.Bible;
 
-public class BibleFeatureMapper : BaseMapper<string, BibleFeatureEntity<string>, BibleFeatureContract>, IBibleFeatureMapper<string>
+public class BibleFeatureMapper : StringBaseMapper<BibleFeatureEntity, BibleFeatureContract>, IBibleFeatureMapper
 {
-    public override BibleFeatureEntity<string> Map(BibleFeatureContract value) => throw new NotImplementedException();
-    public override BibleFeatureContract Map(BibleFeatureEntity<string> value) => throw new NotImplementedException();
-    public override IEnumerable<BibleFeatureEntity<string>> MapAll(IEnumerable<BibleFeatureContract> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleFeatureContract> MapAll(IEnumerable<BibleFeatureEntity<string>> values) => throw new NotImplementedException();
-    public override async Task<BibleFeatureEntity<string>> MapAsync(BibleFeatureContract value)
+    public override BibleFeatureEntity Map(BibleFeatureContract value) => throw new NotImplementedException();
+    public override BibleFeatureContract Map(BibleFeatureEntity value) => throw new NotImplementedException();
+    public override IEnumerable<BibleFeatureEntity> MapAll(IEnumerable<BibleFeatureContract> values) => throw new NotImplementedException();
+    public override IEnumerable<BibleFeatureContract> MapAll(IEnumerable<BibleFeatureEntity> values) => throw new NotImplementedException();
+    public override async Task<BibleFeatureEntity> MapAsync(BibleFeatureContract value)
     {
-        return await Task.Run(() => new BibleFeatureEntity<string>(value.BibleFeatureId, value.FeatureName, value.FeatureDescription));
+        return await Task.Run(() => new BibleFeatureEntity(value.BibleFeatureId, value.FeatureName));
     }
 
-    public override async Task<BibleFeatureContract> MapAsync(BibleFeatureEntity<string> value)
+    public override async Task<BibleFeatureContract> MapAsync(BibleFeatureEntity value)
     {
-        return await Task.Run(() => new BibleFeatureContract(value.BibleFeatureID, value.FeatureName, value.FeatureDescription));
+        return await Task.Run(() => new BibleFeatureContract(value.BibleFeatureId, value.FeatureName));
     }
 
-    public override async Task<IEnumerable<BibleFeatureEntity<string>>> MapAllAsync(IEnumerable<BibleFeatureContract> values)
+    public override async Task<IEnumerable<BibleFeatureEntity>> MapAllAsync(IEnumerable<BibleFeatureContract> values)
     {
-        List<BibleFeatureEntity<string>> entities = new();
+        List<BibleFeatureEntity> entities = new();
 
         foreach(var value in values)
         {
@@ -34,7 +34,7 @@ public class BibleFeatureMapper : BaseMapper<string, BibleFeatureEntity<string>,
         return entities;
     }
 
-    public override async Task<IEnumerable<BibleFeatureContract>> MapAllAsync(IEnumerable<BibleFeatureEntity<string>> values)
+    public override async Task<IEnumerable<BibleFeatureContract>> MapAllAsync(IEnumerable<BibleFeatureEntity> values)
     {
         List<BibleFeatureContract> contracts = new();
 

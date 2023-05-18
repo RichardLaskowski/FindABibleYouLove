@@ -4,88 +4,88 @@ using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleCategoryDictionaryRepository : DictionaryBaseRepository<string, BibleCategoryEntity<string>>, IBibleCategoryRepository<string> 
+public class BibleCategoryDictionaryRepository : DictionaryBaseRepository<string, BibleCategoryEntity>, IBibleCategoryRepository 
 {
-    protected Dictionary<string, BibleCategoryEntity<string>> BibleCategoryDictionary => (Dictionary<string, BibleCategoryEntity<string>>)Dictionary;
+    protected Dictionary<string, BibleCategoryEntity> BibleCategoryDictionary => (Dictionary<string, BibleCategoryEntity>)Dictionary;
 
-    public override BibleCategoryEntity<string> Add(BibleCategoryEntity<string> entity)
+    public override BibleCategoryEntity Add(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<string>> AddRange(IEnumerable<BibleCategoryEntity<string>> entities)
+    public override IEnumerable<BibleCategoryEntity> AddRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<string>> Find(Func<BibleCategoryEntity<string>, bool> predicate)
+    public override IEnumerable<BibleCategoryEntity> Find(Func<BibleCategoryEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleCategoryEntity<string>>> FindAsync(Func<BibleCategoryEntity<string>, bool> predicate)
+    public override Task<IEnumerable<BibleCategoryEntity>> FindAsync(Func<BibleCategoryEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleCategoryEntity<string> Get(string id)
+    public override BibleCategoryEntity Get(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleCategoryEntity<string>> GetAll()
+    public override IEnumerable<BibleCategoryEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override async Task<IEnumerable<BibleCategoryEntity<string>>> GetAllAsync() => await Task.Run(() => BibleCategoryDictionary.Values.ToList<BibleCategoryEntity<string>>());
+    public override async Task<IEnumerable<BibleCategoryEntity>> GetAllAsync() => await Task.Run(() => BibleCategoryDictionary.Values.ToList<BibleCategoryEntity>());
 
-    public override Task<BibleCategoryEntity<string>> GetAsync(string id)
+    public override Task<BibleCategoryEntity> GetAsync(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleCategoryEntity<string> entity)
+    public override void Remove(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleCategoryEntity<string>> entities)
+    public override void RemoveRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleCategoryEntity<string> entity)
+    public override void Update(BibleCategoryEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleCategoryEntity<string>> entities)
+    public override void UpdateRange(IEnumerable<BibleCategoryEntity> entities)
     {
         throw new NotImplementedException();
     }
 
     public override void Seed()
     {
-        BibleCategoryEntity<string> TextCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Text", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> StudyCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Study", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> JournalingCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Journaling", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> ReadersCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Readers", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> MinistryCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Ministry", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> ChildrenAndTeensCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Children and Teens", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> PremiumCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Premium", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> DevotionalCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Devotional", categoryDescription: string.Empty);
-        BibleCategoryEntity<string> OtherCategory = new(bibleCategoryID: Guid.NewGuid().ToString(), categoryName: "Other", categoryDescription: string.Empty);
+        BibleCategoryEntity TextCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Text", categoryDescription: string.Empty);
+        BibleCategoryEntity StudyCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Study", categoryDescription: string.Empty);
+        BibleCategoryEntity JournalingCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Journaling", categoryDescription: string.Empty);
+        BibleCategoryEntity ReadersCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Readers", categoryDescription: string.Empty);
+        BibleCategoryEntity MinistryCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Ministry", categoryDescription: string.Empty);
+        BibleCategoryEntity ChildrenAndTeensCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Children and Teens", categoryDescription: string.Empty);
+        BibleCategoryEntity PremiumCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Premium", categoryDescription: string.Empty);
+        BibleCategoryEntity DevotionalCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Devotional", categoryDescription: string.Empty);
+        BibleCategoryEntity OtherCategory = new(BibleCategoryId: Guid.NewGuid().ToString(), categoryName: "Other", categoryDescription: string.Empty);
 
-        BibleCategoryDictionary[key: TextCategory.BibleCategoryID] = TextCategory;
-        BibleCategoryDictionary[key: StudyCategory.BibleCategoryID] = StudyCategory;
-        BibleCategoryDictionary[key: JournalingCategory.BibleCategoryID] = JournalingCategory;
-        BibleCategoryDictionary[key: ReadersCategory.BibleCategoryID] = ReadersCategory;
-        BibleCategoryDictionary[key: MinistryCategory.BibleCategoryID] = MinistryCategory;
-        BibleCategoryDictionary[key: ChildrenAndTeensCategory.BibleCategoryID] = ChildrenAndTeensCategory;
-        BibleCategoryDictionary[key: PremiumCategory.BibleCategoryID] = PremiumCategory;
-        BibleCategoryDictionary[key: DevotionalCategory.BibleCategoryID] = DevotionalCategory;
-        BibleCategoryDictionary[key: OtherCategory.BibleCategoryID] = OtherCategory;
+        BibleCategoryDictionary[key: TextCategory.BibleCategoryId] = TextCategory;
+        BibleCategoryDictionary[key: StudyCategory.BibleCategoryId] = StudyCategory;
+        BibleCategoryDictionary[key: JournalingCategory.BibleCategoryId] = JournalingCategory;
+        BibleCategoryDictionary[key: ReadersCategory.BibleCategoryId] = ReadersCategory;
+        BibleCategoryDictionary[key: MinistryCategory.BibleCategoryId] = MinistryCategory;
+        BibleCategoryDictionary[key: ChildrenAndTeensCategory.BibleCategoryId] = ChildrenAndTeensCategory;
+        BibleCategoryDictionary[key: PremiumCategory.BibleCategoryId] = PremiumCategory;
+        BibleCategoryDictionary[key: DevotionalCategory.BibleCategoryId] = DevotionalCategory;
+        BibleCategoryDictionary[key: OtherCategory.BibleCategoryId] = OtherCategory;
     }
 }
 

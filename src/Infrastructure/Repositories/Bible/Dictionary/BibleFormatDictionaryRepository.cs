@@ -4,72 +4,72 @@ using Domain.Entities.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFormatDictionaryRepository : DictionaryBaseRepository<string, BibleFormatEntity<string>>, IBibleFormatRepository<string> 
+public class BibleFormatDictionaryRepository : DictionaryBaseRepository<string, BibleFormatEntity>, IBibleFormatRepository 
 {
-    protected Dictionary<string, BibleFormatEntity<string>> BibleFormatDictionary => (Dictionary<string, BibleFormatEntity<string>>)Dictionary;
+    protected Dictionary<string, BibleFormatEntity> BibleFormatDictionary => (Dictionary<string, BibleFormatEntity>)Dictionary;
 
-    public override BibleFormatEntity<string> Add(BibleFormatEntity<string> entity)
+    public override BibleFormatEntity Add(BibleFormatEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFormatEntity<string>> AddRange(IEnumerable<BibleFormatEntity<string>> entities)
+    public override IEnumerable<BibleFormatEntity> AddRange(IEnumerable<BibleFormatEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFormatEntity<string>> Find(Func<BibleFormatEntity<string>, bool> predicate)
+    public override IEnumerable<BibleFormatEntity> Find(Func<BibleFormatEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<BibleFormatEntity<string>>> FindAsync(Func<BibleFormatEntity<string>, bool> predicate)
+    public override Task<IEnumerable<BibleFormatEntity>> FindAsync(Func<BibleFormatEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override BibleFormatEntity<string> Get(string id)
+    public override BibleFormatEntity Get(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<BibleFormatEntity<string>> GetAll()
+    public override IEnumerable<BibleFormatEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override async Task<IEnumerable<BibleFormatEntity<string>>> GetAllAsync() => await Task.Run(() => BibleFormatDictionary.Values.ToList<BibleFormatEntity<string>>());
+    public override async Task<IEnumerable<BibleFormatEntity>> GetAllAsync() => await Task.Run(() => BibleFormatDictionary.Values.ToList<BibleFormatEntity>());
 
-    public override Task<BibleFormatEntity<string>> GetAsync(string id)
+    public override Task<BibleFormatEntity> GetAsync(string id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(BibleFormatEntity<string> entity)
+    public override void Remove(BibleFormatEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<BibleFormatEntity<string>> entities)
+    public override void RemoveRange(IEnumerable<BibleFormatEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(BibleFormatEntity<string> entity)
+    public override void Update(BibleFormatEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<BibleFormatEntity<string>> entities)
+    public override void UpdateRange(IEnumerable<BibleFormatEntity> entities)
     {
         throw new NotImplementedException();
     }
 
     public override void Seed()
     {
-        BibleFormatEntity<string> printFormat = new (Guid.NewGuid().ToString(), "Print", string.Empty);
-        BibleFormatEntity<string> digitalFormat = new(Guid.NewGuid().ToString(), "Digital", string.Empty);
-        BibleFormatEntity<string> audioFormat = new(Guid.NewGuid().ToString(), "Audio", string.Empty);
+        BibleFormatEntity printFormat = new (Guid.NewGuid().ToString(), "Print", string.Empty);
+        BibleFormatEntity digitalFormat = new(Guid.NewGuid().ToString(), "Digital", string.Empty);
+        BibleFormatEntity audioFormat = new(Guid.NewGuid().ToString(), "Audio", string.Empty);
 
         BibleFormatDictionary[printFormat.BibleFormatID] =    printFormat;
         BibleFormatDictionary[digitalFormat.BibleFormatID] =  digitalFormat;

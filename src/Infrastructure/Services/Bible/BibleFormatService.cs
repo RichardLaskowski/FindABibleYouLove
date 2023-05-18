@@ -8,10 +8,10 @@ namespace Infrastructure.Repositories.Bible;
 
 public class BibleFormatService : StringBaseService<BibleFormatContract>, IBibleFormatService 
 {
-    protected IBibleFormatRepository<string> BibleFormatRepo => (IBibleFormatRepository<string>)_repo;
-    protected IBibleFormatMapper<string> BibleFormatMapper => (IBibleFormatMapper<string>)_mapper;
+    protected IBibleFormatRepository BibleFormatRepo => (IBibleFormatRepository)_repo;
+    protected IBibleFormatMapper BibleFormatMapper => (IBibleFormatMapper)_mapper;
 
-    public BibleFormatService(IBibleFormatRepository<string> repo, IBibleFormatMapper<string> mapper) : base(repo, mapper)
+    public BibleFormatService(IBibleFormatRepository repo, IBibleFormatMapper mapper) : base(repo, mapper)
     {
 
     }

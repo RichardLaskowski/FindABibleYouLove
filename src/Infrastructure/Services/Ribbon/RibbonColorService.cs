@@ -11,9 +11,9 @@ namespace Infrastructure.Repositories.Ribbon;
 public class RibbonColorService : StringBaseService<RibbonColorContract>, IRibbonColorService
 {
     protected IRibbonColorRepository<TType> Repository => (IRibbonColorRepository<TType>)_repo;
-    protected IRibbonColorMapper<TType> Mapper => (IRibbonColorMapper<TType>)_mapper;
+    protected IRibbonColorMapper Mapper => (IRibbonColorMapper)_mapper;
 
-    public RibbonColorService(IRibbonColorRepository<TType> repo, IRibbonColorMapper<TType> mapper) : base(repo, mapper)
+    public RibbonColorService(IRibbonColorRepository<TType> repo, IRibbonColorMapper mapper) : base(repo, mapper)
     {
 
     }

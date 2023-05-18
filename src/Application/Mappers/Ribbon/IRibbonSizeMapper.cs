@@ -1,12 +1,8 @@
+using Domain.Base.Interfaces.Mappers;
 using Domain.Entities.Ribbon;
 
 using FindABibleYouLove.Contracts.Ribbon;
-using Domain.Base.Interfaces;
 
 namespace Application.Mappers.Ribbon;
 
-public interface IRibbonSizeMapper<TType>
-    : IBaseMapper<RibbonSizeEntity<TType>, RibbonSizeContract>
-    where TType : class
-{
-}
+public interface IRibbonSizeMapper : IStringBaseMapper<RibbonSizeEntity, RibbonSizeContract> { }

@@ -1,17 +1,17 @@
 ﻿using Application.Mappers.Bible;
 using Application.Repositories.Bible;
 using Application.Services.Bible;
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Services;
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
 public class BibleCategoryService : IStringBaseService<BibleCategoryContract>, IBibleCategoryService 
 {
-    protected IBibleCategoryRepository<string> BibleCategoryRepo => (IBibleCategoryRepository<string>)_repo;
-    protected IBibleCategoryMapper<string> BibleCategoryMapper => (IBibleCategoryMapper<string>)_mapper;
+    protected IBibleCategoryRepository BibleCategoryRepo => (IBibleCategoryRepository)_repo;
+    protected IBibleCategoryMapper BibleCategoryMapper => (IBibleCategoryMapper)_mapper;
 
-    public BibleCategoryService(IBibleCategoryRepository<string> repo, IBibleCategoryMapper<string> mapper) : base(repo, mapper)
+    public BibleCategoryService(IBibleCategoryRepository repo, IBibleCategoryMapper mapper) : base(repo, mapper)
     {
     }
 

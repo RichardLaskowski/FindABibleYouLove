@@ -1,5 +1,5 @@
 using Domain.Base.Classes.Entities;
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Repositories;
 
 namespace Domain.Base.Classes.Repositories;
 

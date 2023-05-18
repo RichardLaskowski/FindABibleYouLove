@@ -1,8 +1,8 @@
-using Domain.Base.Interfaces;
+using Domain.Base.Interfaces.Mappers;
 using Domain.Entities.Cover;
 
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Application.Mappers.Cover;
 
-public interface ICoverMaterialMapper<TType> : IBaseMapper<CoverMaterialEntity<TType>, CoverMaterialContract> where TType : class { }
+public interface ICoverMaterialMapper : IStringBaseMapper<CoverMaterialEntity, CoverMaterialContract> { }

@@ -1,6 +1,5 @@
 ﻿using Domain.Base.Classes.Contracts;
 using Domain.Base.Classes.Entities;
-using Domain.Base.Interfaces;
 
 namespace Domain.Base.Classes.Mappers;
 public abstract class BaseMapper<TType, TEntity, TContract> : IBaseMapper<TEntity, TContract>

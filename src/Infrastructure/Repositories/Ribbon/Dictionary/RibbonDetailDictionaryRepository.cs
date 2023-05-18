@@ -4,66 +4,66 @@ using Domain.Entities.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonDetailDictionaryRepository<TType> : DictionaryBaseRepository<TType, RibbonDetailEntity<TType>>, IRibbonDetailRepository<TType> where TType : class
+public class RibbonDetailDictionaryRepository<TType> : DictionaryBaseRepository<TType, RibbonDetailEntity>, IRibbonDetailRepository<TType> where TType : class
 {
-    protected Dictionary<TType, RibbonDetailEntity<TType>> RibbonDetailDictionary => (Dictionary<TType, RibbonDetailEntity<TType>>)Dictionary;
+    protected Dictionary<TType, RibbonDetailEntity> RibbonDetailDictionary => (Dictionary<TType, RibbonDetailEntity>)Dictionary;
 
-    public override RibbonDetailEntity<TType> Add(RibbonDetailEntity<TType> entity)
+    public override RibbonDetailEntity Add(RibbonDetailEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonDetailEntity<TType>> AddRange(IEnumerable<RibbonDetailEntity<TType>> entities)
+    public override IEnumerable<RibbonDetailEntity> AddRange(IEnumerable<RibbonDetailEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonDetailEntity<TType>> Find(Func<RibbonDetailEntity<TType>, bool> predicate)
+    public override IEnumerable<RibbonDetailEntity> Find(Func<RibbonDetailEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<RibbonDetailEntity<TType>>> FindAsync(Func<RibbonDetailEntity<TType>, bool> predicate)
+    public override Task<IEnumerable<RibbonDetailEntity>> FindAsync(Func<RibbonDetailEntity, bool> predicate)
     {
         throw new NotImplementedException();
     }
 
-    public override RibbonDetailEntity<TType> Get(TType id)
+    public override RibbonDetailEntity Get(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override IEnumerable<RibbonDetailEntity<TType>> GetAll()
+    public override IEnumerable<RibbonDetailEntity> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<IEnumerable<RibbonDetailEntity<TType>>> GetAllAsync()
+    public override Task<IEnumerable<RibbonDetailEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public override Task<RibbonDetailEntity<TType>> GetAsync(TType id)
+    public override Task<RibbonDetailEntity> GetAsync(TType id)
     {
         throw new NotImplementedException();
     }
 
-    public override void Remove(RibbonDetailEntity<TType> entity)
+    public override void Remove(RibbonDetailEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void RemoveRange(IEnumerable<RibbonDetailEntity<TType>> entities)
+    public override void RemoveRange(IEnumerable<RibbonDetailEntity> entities)
     {
         throw new NotImplementedException();
     }
 
-    public override void Update(RibbonDetailEntity<TType> entity)
+    public override void Update(RibbonDetailEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public override void UpdateRange(IEnumerable<RibbonDetailEntity<TType>> entities)
+    public override void UpdateRange(IEnumerable<RibbonDetailEntity> entities)
     {
         throw new NotImplementedException();
     }

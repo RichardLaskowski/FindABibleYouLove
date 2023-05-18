@@ -9,9 +9,9 @@ namespace Infrastructure.Repositories.Ribbon;
 public class RibbonDetailService: StringBaseService<RibbonDetailContract>, IRibbonDetailService
 {
     protected IRibbonDetailRepository<TType> Repository => (IRibbonDetailRepository<TType>)_repo;
-    protected IRibbonDetailMapper<TType> Mapper => (IRibbonDetailMapper<TType>)_mapper;
+    protected IRibbonDetailMapper Mapper => (IRibbonDetailMapper)_mapper;
 
-    public RibbonDetailService(IRibbonDetailRepository<TType> repo, IRibbonDetailMapper<TType> mapper) : base(repo, mapper)
+    public RibbonDetailService(IRibbonDetailRepository<TType> repo, IRibbonDetailMapper mapper) : base(repo, mapper)
     {
 
     }
