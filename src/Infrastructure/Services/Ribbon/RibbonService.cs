@@ -2,16 +2,18 @@
 using Application.Repositories.Ribbon;
 using Application.Services.Ribbon;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Ribbon;
+
 using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonService<TType> : StringBaseService<RibbonContract>, IRibbonService
+public class RibbonService<TType> : StringBaseService<RibbonContract, RibbonEntity>, IRibbonService
 {
-    protected IRibbonRepository<TType> Repository => (IRibbonRepository<TType>)_repo;
+    protected IRibbonRepository Repository => (IRibbonRepository)_repo;
     protected IRibbonMapper Mapper => (IRibbonMapper)_mapper;
 
-    public RibbonService(IRibbonRepository<TType> repo, IRibbonMapper mapper) : base(repo, mapper)
+    public RibbonService(IRibbonRepository repo, IRibbonMapper mapper) : base(repo, mapper)
     {
 
     }

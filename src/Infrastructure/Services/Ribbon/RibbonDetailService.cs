@@ -2,16 +2,18 @@
 using Application.Repositories.Ribbon;
 using Application.Services.Ribbon;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Ribbon;
+
 using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonDetailService: StringBaseService<RibbonDetailContract>, IRibbonDetailService
+public class RibbonDetailService: StringBaseService<RibbonDetailContract, RibbonDetailEntity>, IRibbonDetailService
 {
-    protected IRibbonDetailRepository<TType> Repository => (IRibbonDetailRepository<TType>)_repo;
+    protected IRibbonDetailRepository Repository => (IRibbonDetailRepository)_repo;
     protected IRibbonDetailMapper Mapper => (IRibbonDetailMapper)_mapper;
 
-    public RibbonDetailService(IRibbonDetailRepository<TType> repo, IRibbonDetailMapper mapper) : base(repo, mapper)
+    public RibbonDetailService(IRibbonDetailRepository repo, IRibbonDetailMapper mapper) : base(repo, mapper)
     {
 
     }

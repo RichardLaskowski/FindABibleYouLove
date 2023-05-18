@@ -8,12 +8,12 @@ using FindABibleYouLove.Contracts.Ribbon;
 
 namespace Infrastructure.Repositories.Ribbon;
 
-public class RibbonColorService : StringBaseService<RibbonColorContract>, IRibbonColorService
+public class RibbonColorService : StringBaseService<RibbonColorContract, RibbonColorEntity>, IRibbonColorService
 {
-    protected IRibbonColorRepository<TType> Repository => (IRibbonColorRepository<TType>)_repo;
+    protected IRibbonColorRepository Repository => (IRibbonColorRepository)_repo;
     protected IRibbonColorMapper Mapper => (IRibbonColorMapper)_mapper;
 
-    public RibbonColorService(IRibbonColorRepository<TType> repo, IRibbonColorMapper mapper) : base(repo, mapper)
+    public RibbonColorService(IRibbonColorRepository repo, IRibbonColorMapper mapper) : base(repo, mapper)
     {
 
     }

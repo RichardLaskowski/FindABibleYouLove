@@ -5,6 +5,5 @@ namespace FindABibleYouLove.Contracts.Bible;
 public record BibleTranslationContract(
     string BibleTranslationId,
     string TranslationName,
-    string TranslationAbbreviation,
-    string TranslationDescription)
+    string TranslationAbbreviation)
     : StringBaseContract(BibleTranslationId);

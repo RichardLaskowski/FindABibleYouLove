@@ -2,16 +2,18 @@
 using Application.Repositories.Cover;
 using Application.Services.Cover;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Cover;
+
 using FindABibleYouLove.Contracts.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverService : StringBaseService<CoverContract>, ICoverService
+public class CoverService : StringBaseService<CoverContract, CoverEntity>, ICoverService
 {
-    protected ICoverRepository<TType> Repository => (ICoverRepository<TType>)_repo;
+    protected ICoverRepository Repository => (ICoverRepository)_repo;
     protected ICoverMapper Mapper => (ICoverMapper)_mapper;
 
-    public CoverService(ICoverRepository<TType> repo, ICoverMapper mapper) : base(repo, mapper)
+    public CoverService(ICoverRepository repo, ICoverMapper mapper) : base(repo, mapper)
     {
 
     }

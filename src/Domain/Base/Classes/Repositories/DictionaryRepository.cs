@@ -8,8 +8,5 @@ public abstract class DictionaryRepository<TType, TEntity> : InMemoryRepository<
 {
     protected IDictionary<string, TEntity> Dictionary = new Dictionary<string, TEntity>();
 
-    protected DictionaryRepository() : base()
-    {
-        Seed();
-    }
+    protected DictionaryRepository() : base() { }
 }

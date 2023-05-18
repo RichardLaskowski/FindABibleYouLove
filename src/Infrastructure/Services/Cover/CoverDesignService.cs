@@ -8,12 +8,12 @@ using FindABibleYouLove.Contracts.Cover;
 
 namespace Infrastructure.Repositories.Cover;
 
-public class CoverDesignService : StringBaseService<CoverDesignContract>, ICoverDesignService
+public class CoverDesignService : StringBaseService<CoverDesignContract, CoverDesignEntity>, ICoverDesignService
 {
-    protected ICoverDesignRepository<TType> Repository => (ICoverDesignRepository<TType>)_repo;
+    protected ICoverDesignRepository Repository => (ICoverDesignRepository)_repo;
     protected ICoverDesignMapper Mapper => (ICoverDesignMapper)_mapper;
 
-    public CoverDesignService(ICoverDesignRepository<TType> repo, ICoverDesignMapper mapper) : base(repo, mapper)
+    public CoverDesignService(ICoverDesignRepository repo, ICoverDesignMapper mapper) : base(repo, mapper)
     {
 
     }

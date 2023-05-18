@@ -2,11 +2,13 @@
 using Application.Repositories.Bible;
 using Application.Services.Bible;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Bible;
+
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFormatService : StringBaseService<BibleFormatContract>, IBibleFormatService 
+public class BibleFormatService : StringBaseService<BibleFormatContract, BibleFormatEntity>, IBibleFormatService 
 {
     protected IBibleFormatRepository BibleFormatRepo => (IBibleFormatRepository)_repo;
     protected IBibleFormatMapper BibleFormatMapper => (IBibleFormatMapper)_mapper;

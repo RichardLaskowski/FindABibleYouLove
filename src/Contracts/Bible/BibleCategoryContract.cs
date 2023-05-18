@@ -2,4 +2,4 @@
 
 namespace FindABibleYouLove.Contracts.Bible;
 
-public record BibleCategoryContract(string BibleCategoryId, string CategoryName, string CategoryDescription) : StringBaseContract(BibleCategoryId);
+public record BibleCategoryContract(string Id, string CategoryName, string CategoryDescription) : StringBaseContract(Id);

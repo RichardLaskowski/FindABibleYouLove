@@ -1,8 +1,10 @@
-﻿using Domain.Base.Classes.Entities;
+﻿using System.Text.Json;
+
+using Domain.Base.Classes.Entities;
 
 namespace Domain.Base.Classes.Repositories;
 
-public abstract class FileRepository<TType, TEntity> : DictionaryRepository<TType, TEntity>
+public abstract class FileRepository<TType, TEntity> : DictionaryRepository<TType, TEntity>, IDisposable
     where TType : class
     where TEntity : BaseEntity<TType>
 {
@@ -13,5 +15,17 @@ public abstract class FileRepository<TType, TEntity> : DictionaryRepository<TTyp
     {
         Path = !string.IsNullOrEmpty(path) ? path : Environment.CurrentDirectory.ToString();
         JsonString = string.Empty;
+        Seed();
+    }
+
+    public void Dispose()
+    {
+        JsonSerializerOptions options = new(JsonSerializerDefaults.Web)
+        {
+            WriteIndented = true
+        };
+
+        string jsonString = JsonSerializer.Serialize<IEnumerable<TEntity>>(Dictionary.Values.ToList(), options);
+        File.WriteAllText(Path, jsonString);
     }
 }

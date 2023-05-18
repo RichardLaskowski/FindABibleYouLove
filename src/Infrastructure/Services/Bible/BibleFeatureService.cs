@@ -2,11 +2,13 @@
 using Application.Repositories.Bible;
 using Application.Services.Bible;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Bible;
+
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleFeatureService: StringBaseService<BibleFeatureContract>, IBibleFeatureService 
+public class BibleFeatureService: StringBaseService<BibleFeatureContract, BibleFeatureEntity>, IBibleFeatureService 
 {
     protected IBibleFeatureRepository BibleFeatureRepo => (IBibleFeatureRepository)_repo;
     protected IBibleFeatureMapper BibleFeatureMapper => (IBibleFeatureMapper)_mapper;

@@ -11,7 +11,7 @@ public class BibleCategoryMapper : StringBaseMapper<BibleCategoryEntity, BibleCa
     public override BibleCategoryEntity Map(BibleCategoryContract bibleCategoryContract)
     {
         BibleCategoryEntity bibleCategoryEntity = new(
-            bibleCategoryContract.BibleCategoryId,
+            bibleCategoryContract.Id,
             bibleCategoryContract.CategoryName,
             bibleCategoryContract.CategoryDescription);
 
@@ -28,11 +28,32 @@ public class BibleCategoryMapper : StringBaseMapper<BibleCategoryEntity, BibleCa
         return bibleCategoryContract;
     }
 
-    public override IEnumerable<BibleCategoryEntity> MapAll(IEnumerable<BibleCategoryContract> values) => throw new NotImplementedException();
-    public override IEnumerable<BibleCategoryContract> MapAll(IEnumerable<BibleCategoryEntity> values) => throw new NotImplementedException();
-    public override async Task<BibleCategoryEntity> MapAsync(BibleCategoryContract bibleCategoryContract) => await Task.Run(() => new BibleCategoryEntity(bibleCategoryContract.BibleCategoryId, bibleCategoryContract.CategoryName, bibleCategoryContract.CategoryDescription));
+    public override IEnumerable<BibleCategoryEntity> MapAll(IEnumerable<BibleCategoryContract> bibleCategoryContracts)
+    {
+        List<BibleCategoryEntity> bibleCategoryEntities = new();
 
-    public override async Task<BibleCategoryContract> MapAsync(BibleCategoryEntity value) => await Task.Run(() => new BibleCategoryContract(value.BibleCategoryId, value.CategoryName, value.CategoryDescription));
+        foreach (BibleCategoryContract bibleCategoryContract in bibleCategoryContracts)
+        {
+            bibleCategoryEntities.Add(Map(bibleCategoryContract));
+        }
+
+        return bibleCategoryEntities;
+    }
+
+    public override IEnumerable<BibleCategoryContract> MapAll(IEnumerable<BibleCategoryEntity> bibleCategoryEntities)
+    {
+        List<BibleCategoryContract> bibleCategoryContracts = new();
+
+        foreach (BibleCategoryEntity bibleCategoryEntity in bibleCategoryEntities)
+        {
+            bibleCategoryContracts.Add(Map(bibleCategoryEntity));
+        }
+
+        return bibleCategoryContracts;
+    }
+
+    public override async Task<BibleCategoryEntity> MapAsync(BibleCategoryContract bibleCategoryContract) => await Task.Run(() => Map(bibleCategoryContract));
+    public override async Task<BibleCategoryContract> MapAsync(BibleCategoryEntity bibleCategoryEntity) => await Task.Run(() => Map(bibleCategoryEntity));
 
     public override async Task<IEnumerable<BibleCategoryEntity>> MapAllAsync(IEnumerable<BibleCategoryContract> bibleCategoryContracts)
     {

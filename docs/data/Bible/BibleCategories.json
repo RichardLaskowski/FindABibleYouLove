@@ -1,0 +1,57 @@
+[
+  {
+    "bibleCategoryId": "377e5dc1-ede3-4f56-b406-244a01f23709",
+    "categoryName": "Text",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "b2c2aa46-2082-4be9-b229-66a58f3bb42b",
+    "categoryName": "Study",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "25333cb6-8859-42ab-be52-e53432c84cac",
+    "categoryName": "Children \u0026 Teens",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "e332016f-d337-40de-841a-5f8d51945dd3",
+    "categoryName": "Journaling",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "887fb3d3-7a34-449d-a79c-cbdc76d44c0e",
+    "categoryName": "Reader\u0027s",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "48e86245-1133-4810-ba8c-d8457540d030",
+    "categoryName": "Ministry",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "eb3424ae-b0bc-49b3-adbf-469fe191895f",
+    "categoryName": "Premium",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "180da735-f67e-4fb1-b06f-b097e72365c4",
+    "categoryName": "Artist Series",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "cd6fe5fb-a8ad-459c-a0ad-4be03f5bc76e",
+    "categoryName": "Original Languages",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "be8f198c-05b4-40cf-9ea7-75d94c0d819d",
+    "categoryName": "Audio",
+    "categoryDescription": ""
+  },
+  {
+    "bibleCategoryId": "05fb229b-b93c-46a7-a3d9-c578b13dc3e9",
+    "categoryName": "Other",
+    "categoryDescription": ""
+  }
+]

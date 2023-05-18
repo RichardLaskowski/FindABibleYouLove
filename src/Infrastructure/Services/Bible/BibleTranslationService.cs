@@ -2,16 +2,18 @@
 using Application.Repositories.Bible;
 using Application.Services.Bible;
 using Domain.Base.Classes.Services;
+using Domain.Entities.Bible;
+
 using FindABibleYouLove.Contracts.Bible;
 
 namespace Infrastructure.Repositories.Bible;
 
-public class BibleTranslationService : StringBaseService<BibleTranslationContract>, IBibleTranslationService 
+public class BibleTranslationService : StringBaseService<BibleTranslationContract, BibleTranslationEntity>, IBibleTranslationService 
 {
     protected IBibleTranslationRepository BibleTranslationRepo => (IBibleTranslationRepository)_repo;
-    protected IBibleTranslationMapper<string> BibleTranslationMapper => (IBibleTranslationMapper<string>)_mapper;
+    protected IBibleTranslationMapper BibleTranslationMapper => (IBibleTranslationMapper)_mapper;
 
-    public BibleTranslationService(IBibleTranslationRepository bibleTranslationRepo, IBibleTranslationMapper<string> bibleTranslationMapper) : base(bibleTranslationRepo, bibleTranslationMapper)
+    public BibleTranslationService(IBibleTranslationRepository bibleTranslationRepo, IBibleTranslationMapper bibleTranslationMapper) : base(bibleTranslationRepo, bibleTranslationMapper)
     {
 
     }
