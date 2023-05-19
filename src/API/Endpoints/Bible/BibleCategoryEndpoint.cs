@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Application.Mappers.Bible;
@@ -26,10 +29,20 @@ public class BibleCategoryEndpoint : IEndpoint
 
     #region Route Handlers
 
-    internal async Task<IResult> GetBibleCategoriesAsync(IBibleCategoryService bibleCategoryService) => Results.Ok(value: await bibleCategoryService.GetAllAsync());
+    internal async Task<IResult> GetBibleCategoriesAsync(IBibleCategoryService bibleCategoryService)
+    {
+        IEnumerable<BibleCategoryContract> bibleCategories = await bibleCategoryService.GetAllAsync(); 
+        
+        return bibleCategories.Any()
+            ? TypedResults.Ok<IEnumerable<BibleCategoryContract>>(bibleCategories)
+            : TypedResults.NoContent();
+    }
+
     internal async Task<IResult> CreateBibleCategoryAsync([FromBody] BibleCategoryContract bibleCategoryContract, IBibleCategoryService bibleCategoryService)
     {
-        return Results.Ok(await bibleCategoryService.CreateAsync(bibleCategoryContract));
+        BibleCategoryContract bibleCategory = await bibleCategoryService.CreateAsync(bibleCategoryContract); 
+        
+        return TypedResults.Created<BibleCategoryContract>(bibleCategory);
     }
 
     #endregion

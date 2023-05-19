@@ -18,6 +18,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{78A07684-9281-4303-B9EC-6BA272F46CD5}"
+	ProjectSection(SolutionItems) = preProject
+		api.md = api.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{CEDA18EC-1EE0-4F61-9119-9789633EA78D}"
 EndProject
@@ -25,8 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{5D42B319-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bible", "Bible", "{F9027ED0-B14C-4950-B578-C36051995726}"
 	ProjectSection(SolutionItems) = preProject
-		docs\data\Bible\BibleFeatures.json = docs\data\Bible\BibleFeatures.json
 		docs\data\Bible\BibleCategories.json = docs\data\Bible\BibleCategories.json
+		docs\data\Bible\BibleFeatures.json = docs\data\Bible\BibleFeatures.json
 		docs\data\Bible\BibleFormats = docs\data\Bible\BibleFormats
 		docs\data\Bible\BibleLayouts = docs\data\Bible\BibleLayouts
 		docs\data\Bible\BibleSize = docs\data\Bible\BibleSize
@@ -50,7 +53,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleCategories", "BibleCat
 	ProjectSection(SolutionItems) = preProject
 		CreateBibleCategory.http = CreateBibleCategory.http
 		docs\api\BibleCategories\GetBibleCategories.http = docs\api\BibleCategories\GetBibleCategories.http
-		Responses.md = Responses.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleTranslations", "BibleTranslations", "{C981760E-D4DF-49C4-B607-86E967E35010}"
