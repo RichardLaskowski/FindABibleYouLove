@@ -18,9 +18,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{78A07684-9281-4303-B9EC-6BA272F46CD5}"
-	ProjectSection(SolutionItems) = preProject
-		api.md = api.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{CEDA18EC-1EE0-4F61-9119-9789633EA78D}"
 EndProject
@@ -51,8 +48,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publication", "Publication"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleCategories", "BibleCategories", "{AE5D56E3-D5B7-4144-A804-A76046C131A4}"
 	ProjectSection(SolutionItems) = preProject
+		docs\api\BibleCategories\BibleCategoryAPI.md = docs\api\BibleCategories\BibleCategoryAPI.md
 		CreateBibleCategory.http = CreateBibleCategory.http
+		docs\api\BibleCategories\DeleteBibleCategory.http = docs\api\BibleCategories\DeleteBibleCategory.http
+		docs\api\BibleCategories\GetAllBibleCategories.http = docs\api\BibleCategories\GetAllBibleCategories.http
 		docs\api\BibleCategories\GetBibleCategories.http = docs\api\BibleCategories\GetBibleCategories.http
+		docs\api\BibleCategories\UpdateBibleCategory.http = docs\api\BibleCategories\UpdateBibleCategory.http
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleTranslations", "BibleTranslations", "{C981760E-D4DF-49C4-B607-86E967E35010}"
@@ -66,6 +67,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleFeatures", "BibleFeatu
 	ProjectSection(SolutionItems) = preProject
 		GetBibleFeatues.http = GetBibleFeatues.http
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Unit.Tests", "API.Unit.Tests\API.Unit.Tests.csproj", "{B0D5B738-8272-4371-A1E4-CD9812157265}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +100,10 @@ Global
 		{2866BA26-EBD3-413A-8A86-F6C4FDE7C4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2866BA26-EBD3-413A-8A86-F6C4FDE7C4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2866BA26-EBD3-413A-8A86-F6C4FDE7C4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D5B738-8272-4371-A1E4-CD9812157265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D5B738-8272-4371-A1E4-CD9812157265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D5B738-8272-4371-A1E4-CD9812157265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D5B738-8272-4371-A1E4-CD9812157265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +124,7 @@ Global
 		{C981760E-D4DF-49C4-B607-86E967E35010} = {CEDA18EC-1EE0-4F61-9119-9789633EA78D}
 		{2866BA26-EBD3-413A-8A86-F6C4FDE7C4B4} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
 		{048ACAF7-0D4D-4398-9C31-6F19A8C14031} = {CEDA18EC-1EE0-4F61-9119-9789633EA78D}
+		{B0D5B738-8272-4371-A1E4-CD9812157265} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB6DB385-AF44-4A01-9E07-4BF58C261EED}
