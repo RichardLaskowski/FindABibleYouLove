@@ -1,3 +1,7 @@
-@host= http://localhost:5146
+@hostname = localhost
+@port = 5146
+@host = http://{{hostname}}:{{port}}
+
+###
 
 GET {{host}}/bibles/categories

@@ -20,10 +20,10 @@ public class BibleFeatureEndpoint : IEndpoint
 {
     public void DefineEndpoints(WebApplication app)
     {
-        app.MapGet(pattern: "bible/features", handler: GetAllBibleFeaturesAsync)
+        app.MapGet(pattern: "bibles/features", handler: GetAllBibleFeaturesAsync)
             .WithName("GetAllBibleFeatures");
 
-        app.MapPost(pattern: "bible/features", handler: CreateBibleFeatureAsync)
+        app.MapPost(pattern: "bibles/features", handler: CreateBibleFeatureAsync)
             .WithName("CreateBibleFeature");
     }
 

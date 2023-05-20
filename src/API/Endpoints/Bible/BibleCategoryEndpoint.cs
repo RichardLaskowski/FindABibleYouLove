@@ -24,10 +24,10 @@ public class BibleCategoryEndpoint : IEndpoint
 {
     public void DefineEndpoints(WebApplication app)
     {
-        app.MapGet(pattern: "bible/categories", handler: GetAllBibleCategoriesAsync)
+        app.MapGet(pattern: "bibles/categories", handler: GetAllBibleCategoriesAsync)
             .WithName("GetAllBibleCategories");
 
-        app.MapPost(pattern: "bible/categories", handler: CreateBibleCategoryAsync)
+        app.MapPost(pattern: "bibles/categories", handler: CreateBibleCategoryAsync)
             .WithName("CreateBibleCategory");
     }
 
