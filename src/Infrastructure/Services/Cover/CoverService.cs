@@ -18,7 +18,7 @@ public class CoverService : StringBaseService<CoverContract, CoverEntity>, ICove
 
     }
 
-    public override Task<CoverContract> CreateAsync(CoverContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(CoverContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, CoverContract contract) => throw new NotImplementedException();
     public override Task<CoverContract> GetAsync(string id) => throw new NotImplementedException();

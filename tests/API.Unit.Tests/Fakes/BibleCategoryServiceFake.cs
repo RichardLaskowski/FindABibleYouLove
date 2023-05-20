@@ -11,7 +11,7 @@ internal class BibleCategoryServiceFake : IBibleCategoryService
         _bibleCategories = bibleCategoryContracts;
     }
 
-    public async Task<BibleCategoryContract> CreateAsync(BibleCategoryContract contract) => await Task.FromResult(contract);
+    public async Task<string> CreateAsync(BibleCategoryContract contract) => await Task.FromResult(contract.Id);
     public Task DeleteAsync(string id) => throw new NotImplementedException();
     public Task UpdateAsync(string id, BibleCategoryContract contract) => throw new NotImplementedException();
     public Task<BibleCategoryContract> GetAsync(string id) => throw new NotImplementedException();

@@ -9,8 +9,8 @@ public abstract class ListBaseRepository<TType, TEntity> : IBaseRepository<TType
 {
     protected IList<TEntity> List = new List<TEntity>();
 
-    public abstract TEntity Add(TEntity entity);
-    public abstract IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities);
+    public abstract TType Add(TEntity entity);
+    public abstract IEnumerable<TType> AddRange(IEnumerable<TEntity> entities);
     public abstract IEnumerable<TEntity> Find(Func<TEntity, bool> predicate);
     public abstract Task<IEnumerable<TEntity>> FindAsync(Func<TEntity, bool> predicate);
     public abstract TEntity Get(TType id);

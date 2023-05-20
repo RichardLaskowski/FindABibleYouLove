@@ -18,7 +18,7 @@ public class RibbonColorService : StringBaseService<RibbonColorContract, RibbonC
 
     }
 
-    public override Task<RibbonColorContract> CreateAsync(RibbonColorContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(RibbonColorContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, RibbonColorContract contract) => throw new NotImplementedException();
     public override Task<RibbonColorContract> GetAsync(string id) => throw new NotImplementedException();

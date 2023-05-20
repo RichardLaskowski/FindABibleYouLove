@@ -18,7 +18,7 @@ public class BibleFormatService : StringBaseService<BibleFormatContract, BibleFo
 
     }
 
-    public override Task<BibleFormatContract> CreateAsync(BibleFormatContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(BibleFormatContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, BibleFormatContract contract) => throw new NotImplementedException();
     public override Task<BibleFormatContract> GetAsync(string id) => throw new NotImplementedException();

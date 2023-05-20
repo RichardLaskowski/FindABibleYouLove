@@ -19,12 +19,12 @@ public class BibleFeatureService: StringBaseService<BibleFeatureContract, BibleF
 
     }
 
-    public override async Task<BibleFeatureContract> CreateAsync(BibleFeatureContract contract)
+    public override async Task<string> CreateAsync(BibleFeatureContract contract)
     {
         BibleFeatureEntity bibleFeatureEntity = await BibleFeatureMapper.MapAsync(contract);
-        BibleFeatureEntity entityResult = BibleFeatureRepository.Add(bibleFeatureEntity);
-        var contractResult = await BibleFeatureMapper.MapAsync(entityResult);
-        return contractResult;
+        string bibleFeatureId = BibleFeatureRepository.Add(bibleFeatureEntity);
+
+        return bibleFeatureId;
     }
 
     public override Task DeleteAsync(string id) => throw new NotImplementedException();

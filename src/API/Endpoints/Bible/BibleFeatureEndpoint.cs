@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace API.Endpoints.Bible;
 
@@ -50,9 +51,9 @@ public class BibleFeatureEndpoint : IEndpoint
     {
         try
         {
-            BibleFeatureContract bibleFeature = await bibleFeatureService.CreateAsync(bibleFeatureContract);
+            string bibleFeatureId = await bibleFeatureService.CreateAsync(bibleFeatureContract);
 
-            return TypedResults.Created($"bibles/features/{bibleFeature.Id})", bibleFeature);
+            return TypedResults.Created($"bibles/features/{bibleFeatureId})", bibleFeatureContract);
         }
         catch (Exception e)
         {

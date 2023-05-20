@@ -19,7 +19,7 @@ public class RibbonSizeService : StringBaseService<RibbonSizeContract, RibbonSiz
 
     }
 
-    public override Task<RibbonSizeContract> CreateAsync(RibbonSizeContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(RibbonSizeContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, RibbonSizeContract contract) => throw new NotImplementedException();
     public override Task<RibbonSizeContract> GetAsync(string id) => throw new NotImplementedException();

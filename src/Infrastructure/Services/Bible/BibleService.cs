@@ -18,7 +18,7 @@ public class BibleService : StringBaseService<BibleContract, BibleEntity>, IBibl
 
     }
 
-    public override Task<BibleContract> CreateAsync(BibleContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(BibleContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, BibleContract contract) => throw new NotImplementedException();
     public override Task<BibleContract> GetAsync(string id) => throw new NotImplementedException();

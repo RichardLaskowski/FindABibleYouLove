@@ -18,7 +18,7 @@ public class CoverColorService : StringBaseService<CoverColorContract, CoverColo
 
     }
 
-    public override Task<CoverColorContract> CreateAsync(CoverColorContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(CoverColorContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, CoverColorContract contract) => throw new NotImplementedException();
     public override Task<CoverColorContract> GetAsync(string id) => throw new NotImplementedException();

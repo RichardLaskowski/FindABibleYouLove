@@ -20,7 +20,7 @@ public abstract class BaseService<TType, TEntity, TContract> : IBaseService<TTyp
         _mapper = mapper;
     }
 
-    public abstract Task<TContract> CreateAsync(TContract contract);
+    public abstract Task<TType> CreateAsync(TContract contract);
     public abstract Task DeleteAsync(TType id);
     public abstract Task UpdateAsync(TType id, TContract contract);
     public abstract Task<TContract> GetAsync(TType id);

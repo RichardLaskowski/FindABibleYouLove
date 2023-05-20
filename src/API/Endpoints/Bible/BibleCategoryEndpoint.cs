@@ -55,9 +55,9 @@ public class BibleCategoryEndpoint : IEndpoint
     {
         try
         {
-            BibleCategoryContract bibleCategory = await bibleCategoryService.CreateAsync(bibleCategoryContract); 
+            string bibleCategoryId = await bibleCategoryService.CreateAsync(bibleCategoryContract); 
         
-            return TypedResults.Created($"bibles/categories/{bibleCategory.Id})", bibleCategory);
+            return TypedResults.Created($"bibles/categories/{bibleCategoryId})", bibleCategoryContract);
         }
         catch (Exception e)
         {

@@ -1,32 +1,42 @@
 [
     {
-        "FeatureName":"Cross-References"
+        "BibleFeatureId":  "",
+        "FeatureName": "Cross-References"
     },
     {
-        "FeatureName":"Concordance"
+        "BibleFeatureId": "",
+        "FeatureName": "Concordance"
     },
     {
-        "FeatureName":"Ribbon"
+        "BibleFeatureId": "",
+        "FeatureName": "Ribbon"
     },
     {
-        "FeatureName":"Maps"
+        "BibleFeatureId": "",
+        "FeatureName": "Maps"
     },
     {
-        "FeatureName":"Gliding"
+        "BibleFeatureId": "",
+        "FeatureName": "Gilding"
     },
     {
-        "FeatureName":"Reading Plan"
+        "BibleFeatureId": "",
+        "FeatureName": "Reading Plan"
     },
     {
-        "FeatureName":"Red Letter"
+        "BibleFeatureId": "",
+        "FeatureName": "Red Letter"
     },
     {
-        "FeatureName":"Black Letter"
+        "BibleFeatureId": "",
+        "FeatureName": "Black Letter"
     },
     {
-        "FeatureName":"Biblical Book Introductions"
+        "BibleFeatureId": "",
+        "FeatureName": "Biblical Book Introductions"
     },
     {
-        "FeatureName":"Indexed"
+        "BibleFeatureId": "",
+        "FeatureName": "Indexed"
     }
 ]

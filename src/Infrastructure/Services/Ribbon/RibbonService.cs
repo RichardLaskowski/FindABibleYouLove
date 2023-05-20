@@ -18,7 +18,7 @@ public class RibbonService<TType> : StringBaseService<RibbonContract, RibbonEnti
 
     }
 
-    public override Task<RibbonContract> CreateAsync(RibbonContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(RibbonContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, RibbonContract contract) => throw new NotImplementedException();
     public override Task<RibbonContract> GetAsync(string id) => throw new NotImplementedException();

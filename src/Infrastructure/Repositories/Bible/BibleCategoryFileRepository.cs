@@ -27,13 +27,13 @@ public class BibleCategoryFileRepository : FileRepository<string, BibleCategoryE
         }
     }
 
-    public override BibleCategoryEntity Add(BibleCategoryEntity entity)
+    public override string Add(BibleCategoryEntity entity)
     {
         BibleCategoryDictionary.Add(entity.BibleCategoryId, entity);
-        return entity;
+        return entity.BibleCategoryId;
     }
 
-    public override IEnumerable<BibleCategoryEntity> AddRange(IEnumerable<BibleCategoryEntity> entities) => throw new NotImplementedException();
+    public override IEnumerable<string> AddRange(IEnumerable<BibleCategoryEntity> entities) => throw new NotImplementedException();
     public override void Remove(BibleCategoryEntity entity) => throw new NotImplementedException();
     public override void RemoveRange(IEnumerable<BibleCategoryEntity> entities) => throw new NotImplementedException();
     public override BibleCategoryEntity Get(string id) => throw new NotImplementedException();

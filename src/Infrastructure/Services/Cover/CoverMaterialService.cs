@@ -18,7 +18,7 @@ public class CoverMaterialService : StringBaseService<CoverMaterialContract, Cov
 
     }
 
-    public override Task<CoverMaterialContract> CreateAsync(CoverMaterialContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(CoverMaterialContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, CoverMaterialContract contract) => throw new NotImplementedException();
     public override Task<CoverMaterialContract> GetAsync(string id) => throw new NotImplementedException();

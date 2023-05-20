@@ -14,8 +14,8 @@ public abstract class InMemoryRepository<TType, TEntity> : IInMemoryRepository<T
         entities = new Collection<TEntity>();
     }
     public abstract void Seed();
-    public abstract TEntity Add(TEntity entity);
-    public abstract IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities);
+    public abstract TType Add(TEntity entity);
+    public abstract IEnumerable<TType> AddRange(IEnumerable<TEntity> entities);
     public abstract void Remove(TEntity entity);
     public abstract void RemoveRange(IEnumerable<TEntity> entities);
     public abstract TEntity Get(TType id);

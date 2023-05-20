@@ -18,7 +18,7 @@ public class RibbonDetailService: StringBaseService<RibbonDetailContract, Ribbon
 
     }
 
-    public override Task<RibbonDetailContract> CreateAsync(RibbonDetailContract contract) => throw new NotImplementedException();
+    public override Task<string> CreateAsync(RibbonDetailContract contract) => throw new NotImplementedException();
     public override Task DeleteAsync(string id) => throw new NotImplementedException();
     public override Task UpdateAsync(string id, RibbonDetailContract contract) => throw new NotImplementedException();
     public override Task<RibbonDetailContract> GetAsync(string id) => throw new NotImplementedException();
