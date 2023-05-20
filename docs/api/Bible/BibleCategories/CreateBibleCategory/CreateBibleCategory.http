@@ -1,0 +1,14 @@
+@hostname = localhost
+@port = 5146
+@host = http://{{hostname}}:{{port}}
+
+###
+
+POST {{host}}/bibles/categories
+Content-Type: application/json
+
+{
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "CategoryName": "Category",
+    "CategoryDescription": "Description"
+}

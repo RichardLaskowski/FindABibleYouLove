@@ -9,8 +9,8 @@ POST /bibles/categories
 ```json
 {
     "Id": "00000000-0000-0000-0000-000000000000",
-    "CategoryName": "string",
-    "CategoryDescription": "string"
+    "CategoryName": "Category",
+    "CategoryDescription": "Description"
 }
 ```
 
@@ -27,7 +27,7 @@ Location: {{host}}/bibles/categories/{{id}}
 ```json
 {
     "Id": "00000000-0000-0000-0000-000000000000",
-    "CategoryName": "string",
-    "CategoryDescription": "string"
+    "CategoryName": "Category",
+    "CategoryDescription": "Description"
 }
 ```

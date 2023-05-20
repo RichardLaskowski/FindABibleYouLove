@@ -1,0 +1,13 @@
+@hostname = localhost
+@port = 5146
+@host = http://{{hostname}}:{{port}}
+
+###
+
+POST {{host}}/bibles/features
+Content-Type: application/json
+
+{
+    "Id": "",
+    "FeatureName": "Feature",
+}
