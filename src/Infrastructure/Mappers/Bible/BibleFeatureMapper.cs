@@ -14,7 +14,7 @@ public class BibleFeatureMapper : StringBaseMapper<BibleFeatureEntity, BibleFeat
     public override IEnumerable<BibleFeatureContract> MapAll(IEnumerable<BibleFeatureEntity> values) => throw new NotImplementedException();
     public override async Task<BibleFeatureEntity> MapAsync(BibleFeatureContract value)
     {
-        return await Task.Run(() => new BibleFeatureEntity(value.BibleFeatureId, value.FeatureName));
+        return await Task.Run(() => new BibleFeatureEntity(value.Id, value.FeatureName));
     }
 
     public override async Task<BibleFeatureContract> MapAsync(BibleFeatureEntity value)

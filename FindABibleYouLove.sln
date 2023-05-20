@@ -73,6 +73,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Unit.Tests", "tests\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Unit.Tests", "tests\API.Unit.Tests\API.Unit.Tests.csproj", "{3CCF9936-F3D1-44EA-8D5A-0E786DB11EB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleFeatures", "GetAllBibleFeatures", "{174B8FF7-A993-4C63-9988-5C5676699141}"
+	ProjectSection(SolutionItems) = preProject
+		GetAllBibleFeatures.API.md = GetAllBibleFeatures.API.md
+		GetAllBibleFeatures.http = GetAllBibleFeatures.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +149,7 @@ Global
 		{4CD5D430-8A97-4351-ADAA-72ACFA93AAF3} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{65D3BF5A-17D8-4CEB-9E2C-ECB3B46FCAE0} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{3CCF9936-F3D1-44EA-8D5A-0E786DB11EB5} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
+		{174B8FF7-A993-4C63-9988-5C5676699141} = {048ACAF7-0D4D-4398-9C31-6F19A8C14031}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB6DB385-AF44-4A01-9E07-4BF58C261EED}

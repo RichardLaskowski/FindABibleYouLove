@@ -20,7 +20,7 @@ public abstract class FileRepository<TType, TEntity> : DictionaryRepository<TTyp
 
     public void Dispose()
     {
-        JsonSerializerOptions options = new(JsonSerializerDefaults.Web)
+        JsonSerializerOptions options = new()
         {
             WriteIndented = true
         };

@@ -1,0 +1,7 @@
+@hostname = localhost
+@port = 5146
+@host = http://{{hostname}}:{{port}}
+
+###
+
+GET {{host}}/bible/features
