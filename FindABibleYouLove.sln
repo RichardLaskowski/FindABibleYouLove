@@ -17,54 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{78A07684-9281-4303-B9EC-6BA272F46CD5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{CEDA18EC-1EE0-4F61-9119-9789633EA78D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bible", "Bible", "{F9027ED0-B14C-4950-B578-C36051995726}"
-	ProjectSection(SolutionItems) = preProject
-		docs\data\Bible\BibleCategories.json = docs\data\Bible\BibleCategories.json
-		docs\data\Bible\BibleFeatures.json = docs\data\Bible\BibleFeatures.json
-		docs\data\Bible\BibleFormats = docs\data\Bible\BibleFormats
-		docs\data\Bible\BibleLayouts = docs\data\Bible\BibleLayouts
-		docs\data\Bible\BibleSize = docs\data\Bible\BibleSize
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cover", "Cover", "{D1BA1765-E5B5-43B9-8F66-C5D416E9A465}"
-	ProjectSection(SolutionItems) = preProject
-		docs\data\Cover\CoverColors = docs\data\Cover\CoverColors
-		docs\data\Cover\CoverDesigns = docs\data\Cover\CoverDesigns
-		docs\data\Cover\CoverMaterials = docs\data\Cover\CoverMaterials
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ribbon", "Ribbon", "{3228490E-93D8-43FB-A52F-7CE9E3E65155}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publication", "Publication", "{9E43B0AF-13E9-41D9-B807-2171EC93C602}"
-	ProjectSection(SolutionItems) = preProject
-		docs\data\Publication\PublicationTypes = docs\data\Publication\PublicationTypes
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleCategories", "BibleCategories", "{AE5D56E3-D5B7-4144-A804-A76046C131A4}"
-	ProjectSection(SolutionItems) = preProject
-		docs\api\BibleCategories\BibleCategoryAPI.md = docs\api\BibleCategories\BibleCategoryAPI.md
-		CreateBibleCategory.http = CreateBibleCategory.http
-		docs\api\BibleCategories\DeleteBibleCategory.http = docs\api\BibleCategories\DeleteBibleCategory.http
-		docs\api\BibleCategories\GetAllBibleCategories.http = docs\api\BibleCategories\GetAllBibleCategories.http
-		docs\api\BibleCategories\GetBibleCategories.http = docs\api\BibleCategories\GetBibleCategories.http
-		docs\api\BibleCategories\UpdateBibleCategory.http = docs\api\BibleCategories\UpdateBibleCategory.http
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleTranslations", "BibleTranslations", "{C981760E-D4DF-49C4-B607-86E967E35010}"
-	ProjectSection(SolutionItems) = preProject
-		docs\api\BibleTranslations\GetBibleTranslations.http = docs\api\BibleTranslations\GetBibleTranslations.http
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleFeatures", "BibleFeatures", "{048ACAF7-0D4D-4398-9C31-6F19A8C14031}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Unit.Tests", "API.Unit.Tests\API.Unit.Tests.csproj", "{B0D5B738-8272-4371-A1E4-CD9812157265}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Unit.Tests", "tests\Application.Unit.Tests\Application.Unit.Tests.csproj", "{B01AEABC-671F-418B-8F14-52D1F0F02FC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Unit.Tests", "tests\Infrastructure.Unit.Tests\Infrastructure.Unit.Tests.csproj", "{4CD5D430-8A97-4351-ADAA-72ACFA93AAF3}"
@@ -72,6 +24,40 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Unit.Tests", "tests\Domain.Unit.Tests\Domain.Unit.Tests.csproj", "{65D3BF5A-17D8-4CEB-9E2C-ECB3B46FCAE0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Unit.Tests", "tests\API.Unit.Tests\API.Unit.Tests.csproj", "{3CCF9936-F3D1-44EA-8D5A-0E786DB11EB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B4A00BE7-820E-4AA9-AF5E-F834E8E198FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{804342DB-E9F7-4C34-9061-3F6FC84ECE9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{554E1AA6-BCB6-4985-82DE-FD222B79A723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleCategory", "BibleCategory", "{52CF59BB-6359-4B23-A1E7-001F0EC0C911}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BibleFeature", "BibleFeature", "{53CD258F-F322-425D-9101-AAF89A974578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bible", "Bible", "{00314113-BA2B-4FFC-97BB-DFDF77D24619}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cover", "Cover", "{F6E87607-E3DC-4177-92FE-4FBCCF626FFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ribbon", "Ribbon", "{0AA83500-65B9-4F9E-8FAB-D1221CCC11AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bible", "Bible", "{C697EF28-71B7-48DA-BCD8-D9662A80EC77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateBibleCategory", "CreateBibleCategory", "{A0F07165-A5A3-4635-A31B-49472AE0515B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api\Bible\BibleCategories\CreateBibleCategory\CreateBibleCategory.API.md = docs\api\Bible\BibleCategories\CreateBibleCategory\CreateBibleCategory.API.md
+		docs\api\Bible\BibleCategories\CreateBibleCategory\CreateBibleCategory.http = docs\api\Bible\BibleCategories\CreateBibleCategory\CreateBibleCategory.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleCategories", "GetAllBibleCategories", "{FE298CD4-D91F-4340-86FA-DE09932AAFF4}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api\Bible\BibleCategories\GetAllBibleCategories\GetAllBibleCategories.API.md = docs\api\Bible\BibleCategories\GetAllBibleCategories\GetAllBibleCategories.API.md
+		docs\api\Bible\BibleCategories\GetAllBibleCategories\GetAllBibleCategories.http = docs\api\Bible\BibleCategories\GetAllBibleCategories\GetAllBibleCategories.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateBibleFeature", "CreateBibleFeature", "{C4439EEB-0BA3-43BD-A0DB-8E709C59EC62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleFeatures", "GetAllBibleFeatures", "{FC57B994-7AEC-4D97-B586-B2DC3B41409E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,10 +85,6 @@ Global
 		{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29A342CF-56BC-4A7A-8B35-FB04ECF508B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0D5B738-8272-4371-A1E4-CD9812157265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0D5B738-8272-4371-A1E4-CD9812157265}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0D5B738-8272-4371-A1E4-CD9812157265}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0D5B738-8272-4371-A1E4-CD9812157265}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B01AEABC-671F-418B-8F14-52D1F0F02FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B01AEABC-671F-418B-8F14-52D1F0F02FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B01AEABC-671F-418B-8F14-52D1F0F02FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -129,20 +111,22 @@ Global
 		{86867B52-1F80-41B6-9704-AD0153941BA9} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
 		{797A529A-7245-461F-B84C-109D57339E02} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
 		{29A342CF-56BC-4A7A-8B35-FB04ECF508B6} = {E93F72B1-9A7E-4043-AC6E-38ED2257DBFF}
-		{CEDA18EC-1EE0-4F61-9119-9789633EA78D} = {78A07684-9281-4303-B9EC-6BA272F46CD5}
-		{5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6} = {78A07684-9281-4303-B9EC-6BA272F46CD5}
-		{F9027ED0-B14C-4950-B578-C36051995726} = {5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6}
-		{D1BA1765-E5B5-43B9-8F66-C5D416E9A465} = {5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6}
-		{3228490E-93D8-43FB-A52F-7CE9E3E65155} = {5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6}
-		{9E43B0AF-13E9-41D9-B807-2171EC93C602} = {5D42B319-3F52-4D0F-81D7-E7EFB1CC3FE6}
-		{AE5D56E3-D5B7-4144-A804-A76046C131A4} = {CEDA18EC-1EE0-4F61-9119-9789633EA78D}
-		{C981760E-D4DF-49C4-B607-86E967E35010} = {CEDA18EC-1EE0-4F61-9119-9789633EA78D}
-		{048ACAF7-0D4D-4398-9C31-6F19A8C14031} = {CEDA18EC-1EE0-4F61-9119-9789633EA78D}
-		{B0D5B738-8272-4371-A1E4-CD9812157265} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{B01AEABC-671F-418B-8F14-52D1F0F02FC3} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{4CD5D430-8A97-4351-ADAA-72ACFA93AAF3} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{65D3BF5A-17D8-4CEB-9E2C-ECB3B46FCAE0} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
 		{3CCF9936-F3D1-44EA-8D5A-0E786DB11EB5} = {6A1CE074-C0CE-49A3-8CA9-0716F89FA9CD}
+		{804342DB-E9F7-4C34-9061-3F6FC84ECE9D} = {B4A00BE7-820E-4AA9-AF5E-F834E8E198FD}
+		{554E1AA6-BCB6-4985-82DE-FD222B79A723} = {B4A00BE7-820E-4AA9-AF5E-F834E8E198FD}
+		{52CF59BB-6359-4B23-A1E7-001F0EC0C911} = {C697EF28-71B7-48DA-BCD8-D9662A80EC77}
+		{53CD258F-F322-425D-9101-AAF89A974578} = {C697EF28-71B7-48DA-BCD8-D9662A80EC77}
+		{00314113-BA2B-4FFC-97BB-DFDF77D24619} = {554E1AA6-BCB6-4985-82DE-FD222B79A723}
+		{F6E87607-E3DC-4177-92FE-4FBCCF626FFF} = {554E1AA6-BCB6-4985-82DE-FD222B79A723}
+		{0AA83500-65B9-4F9E-8FAB-D1221CCC11AC} = {554E1AA6-BCB6-4985-82DE-FD222B79A723}
+		{C697EF28-71B7-48DA-BCD8-D9662A80EC77} = {804342DB-E9F7-4C34-9061-3F6FC84ECE9D}
+		{A0F07165-A5A3-4635-A31B-49472AE0515B} = {52CF59BB-6359-4B23-A1E7-001F0EC0C911}
+		{FE298CD4-D91F-4340-86FA-DE09932AAFF4} = {52CF59BB-6359-4B23-A1E7-001F0EC0C911}
+		{C4439EEB-0BA3-43BD-A0DB-8E709C59EC62} = {53CD258F-F322-425D-9101-AAF89A974578}
+		{FC57B994-7AEC-4D97-B586-B2DC3B41409E} = {53CD258F-F322-425D-9101-AAF89A974578}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB6DB385-AF44-4A01-9E07-4BF58C261EED}
