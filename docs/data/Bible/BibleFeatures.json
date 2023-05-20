@@ -1,42 +1,38 @@
 [
-    {
-        "BibleFeatureId":  "",
-        "FeatureName": "Cross-References"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Concordance"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Ribbon"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Maps"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Gilding"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Reading Plan"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Red Letter"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Black Letter"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Biblical Book Introductions"
-    },
-    {
-        "BibleFeatureId": "",
-        "FeatureName": "Indexed"
-    }
+  {
+    "BibleFeatureId": "5cbc184d-64e6-401f-9ed5-6f78f2262cb4",
+    "FeatureName": "Cross-References"
+  },
+  {
+    "BibleFeatureId": "8dfe911e-1003-4bd4-83c4-5284fe62a66d",
+    "FeatureName": "Concordance"
+  },
+  {
+    "BibleFeatureId": "c99909f4-5765-420f-bdc9-893bc08ebe31",
+    "FeatureName": "Ribbon"
+  },
+  {
+    "BibleFeatureId": "6797e2f6-e923-4efd-a98b-119df0c42495",
+    "FeatureName": "Maps"
+  },
+  {
+    "BibleFeatureId": "53ebb6c1-c974-448a-9ec3-56654812f44c",
+    "FeatureName": "Gilding"
+  },
+  {
+    "BibleFeatureId": "fbbe4b96-6489-441f-b6e3-256fc816a314",
+    "FeatureName": "Red Letter"
+  },
+  {
+    "BibleFeatureId": "34cfc6fe-7dd5-460e-8467-4997b7d8b779",
+    "FeatureName": "Black Letter"
+  },
+  {
+    "BibleFeatureId": "3dd477d6-7940-4b7f-b35a-3b15dbb4bea6",
+    "FeatureName": "Biblical Book Introductions"
+  },
+  {
+    "BibleFeatureId": "e664350d-6f22-49e4-8ff9-9d0ab81984b3",
+    "FeatureName": "Indexed"
+  }
 ]

@@ -57,7 +57,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleCategories", "Ge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateBibleFeature", "CreateBibleFeature", "{C4439EEB-0BA3-43BD-A0DB-8E709C59EC62}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleFeatures", "GetAllBibleFeatures", "{FC57B994-7AEC-4D97-B586-B2DC3B41409E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Unit.Tests", "tests\API.Unit.Tests\API.Unit.Tests.csproj", "{3CCF9936-F3D1-44EA-8D5A-0E786DB11EB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GetAllBibleFeatures", "GetAllBibleFeatures", "{174B8FF7-A993-4C63-9988-5C5676699141}"
+	ProjectSection(SolutionItems) = preProject
+		GetAllBibleFeatures.API.md = GetAllBibleFeatures.API.md
+		GetAllBibleFeatures.http = GetAllBibleFeatures.http
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

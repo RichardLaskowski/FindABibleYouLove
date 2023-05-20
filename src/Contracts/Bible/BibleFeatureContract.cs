@@ -3,6 +3,6 @@ using Domain.Base.Classes.Contracts;
 namespace FindABibleYouLove.Contracts.Bible;
 
 public record BibleFeatureContract(
-    string BibleFeatureId,
+    string Id,
     string FeatureName) 
-    : StringBaseContract(BibleFeatureId); 
+    : StringBaseContract(Id); 

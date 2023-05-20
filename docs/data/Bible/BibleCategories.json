@@ -1,56 +1,56 @@
 [
   {
-    "BibleCategoryId": "377e5dc1-ede3-4f56-b406-244a01f23709",
+    "BibleCategoryId": "dbf17887-4dc4-4fe9-bf2c-20750859b227",
     "CategoryName": "Text",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "b2c2aa46-2082-4be9-b229-66a58f3bb42b",
+    "BibleCategoryId": "4e0ae4cc-9564-4250-aa90-a152788781da",
     "CategoryName": "Study",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "25333cb6-8859-42ab-be52-e53432c84cac",
+    "BibleCategoryId": "d0445daa-ecb1-491c-ae6b-c5783041237d",
     "CategoryName": "Children \u0026 Teens",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "e332016f-d337-40de-841a-5f8d51945dd3",
+    "BibleCategoryId": "213c765f-1de9-4a18-add1-a90349587cfa",
     "CategoryName": "Journaling",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "887fb3d3-7a34-449d-a79c-cbdc76d44c0e",
+    "BibleCategoryId": "2d2c771c-0ca3-4369-bf89-23ef2214ffd5",
     "CategoryName": "Reader\u0027s",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "48e86245-1133-4810-ba8c-d8457540d030",
+    "BibleCategoryId": "61171435-c4d8-4d95-87ed-3fa80448229c",
     "CategoryName": "Ministry",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "eb3424ae-b0bc-49b3-adbf-469fe191895f",
+    "BibleCategoryId": "ed30a576-5647-428e-a009-cc75976a823a",
     "CategoryName": "Premium",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "180da735-f67e-4fb1-b06f-b097e72365c4",
+    "BibleCategoryId": "a76b16ca-0aaf-460a-979f-01912c7a54f2",
     "CategoryName": "Artist Series",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "cd6fe5fb-a8ad-459c-a0ad-4be03f5bc76e",
+    "BibleCategoryId": "9cee7be4-1b79-49a8-a35e-de2ba2aedf91",
     "CategoryName": "Original Languages",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "be8f198c-05b4-40cf-9ea7-75d94c0d819d",
+    "BibleCategoryId": "fdd607ee-090f-4e23-b074-194a92a37a81",
     "CategoryName": "Audio",
     "CategoryDescription": ""
   },
   {
-    "BibleCategoryId": "05fb229b-b93c-46a7-a3d9-c578b13dc3e9",
+    "BibleCategoryId": "88ec068c-1dc8-47b2-9d31-15a8076411d8",
     "CategoryName": "Other",
     "CategoryDescription": ""
   }
