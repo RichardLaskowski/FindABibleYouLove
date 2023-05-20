@@ -51,14 +51,13 @@ public class BibleCategoryEndpoint : IEndpoint
 
     internal async Task<IResult> CreateBibleCategoryAsync(
         [FromBody] BibleCategoryContract bibleCategoryContract,
-        IBibleCategoryService bibleCategoryService,
-        LinkGenerator linker)
+        IBibleCategoryService bibleCategoryService)
     {
         try
         {
             BibleCategoryContract bibleCategory = await bibleCategoryService.CreateAsync(bibleCategoryContract); 
         
-            return TypedResults.Created($"{linker.GetPathByName("CreateBibleCategory", bibleCategory.Id)}", bibleCategory);
+            return TypedResults.Created($"bibles/categories/{bibleCategory.Id})", bibleCategory);
         }
         catch (Exception e)
         {

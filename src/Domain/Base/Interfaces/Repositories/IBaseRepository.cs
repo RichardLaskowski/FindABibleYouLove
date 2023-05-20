@@ -8,8 +8,8 @@ public interface IBaseRepository<TType, TEntity>
 {
     #region Add
 
-    TEntity Add(TEntity entity);
-    IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities);
+    TType Add(TEntity entity);
+    IEnumerable<TType> AddRange(IEnumerable<TEntity> entities);
 
     #endregion Add
 

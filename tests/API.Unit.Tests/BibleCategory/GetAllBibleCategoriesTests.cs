@@ -1,6 +1,5 @@
 ﻿using API.Endpoints.Bible;
-using API.Unit.Tests.BibleCategory.Fakes;
-
+using API.Unit.Tests.Fakes;
 using FindABibleYouLove.Contracts.Bible;
 
 using Microsoft.AspNetCore.Http;
@@ -8,7 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace API.Unit.Tests.BibleCategory;
 
-public class BibleCategoryTests 
+public class GetAllBibleCategoriesTests 
 {
     [Fact]
     public async Task GetAllBibleCategories_ReturnsNotFound_WhenNoCategoriesExists()

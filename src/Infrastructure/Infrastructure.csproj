@@ -7,16 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositories\Cover\**" />
+    <Compile Remove="Repositories\Ribbon\**" />
+    <EmbeddedResource Remove="Repositories\Cover\**" />
+    <EmbeddedResource Remove="Repositories\Ribbon\**" />
+    <None Remove="Repositories\Cover\**" />
+    <None Remove="Repositories\Ribbon\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\Cover\" />
-    <Folder Include="Repositories\Ribbon\" />
   </ItemGroup>
 
 </Project>

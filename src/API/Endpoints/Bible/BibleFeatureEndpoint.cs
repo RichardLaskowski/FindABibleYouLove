@@ -1,4 +1,16 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Application.Mappers.Bible;
+using Application.Repositories.Bible;
+using Application.Services.Bible;
+using FindABibleYouLove.Contracts.Bible;
+using Infrastructure.Mappers.Bible;
+using Infrastructure.Repositories.Bible;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
+
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace API.Endpoints.Bible;
@@ -7,16 +19,53 @@ public class BibleFeatureEndpoint : IEndpoint
 {
     public void DefineEndpoints(WebApplication app)
     {
+        app.MapGet(pattern: "bible/features", handler: GetAllBibleFeaturesAsync)
+            .WithName("GetAllBibleFeatures");
 
+        app.MapPost(pattern: "bible/features", handler: CreateBibleFeatureAsync)
+            .WithName("CreateBibleFeature");
     }
 
-    #region Route Handlers
+    #region Handlers
 
+    internal async Task<IResult> GetAllBibleFeaturesAsync(IBibleFeatureService bibleFeatureService)
+    {
+        try
+        {
+            IEnumerable<BibleFeatureContract> bibleFeatures = await bibleFeatureService.GetAllAsync();
 
-    #endregion
+            return bibleFeatures.Any()
+                ? TypedResults.Ok<IEnumerable<BibleFeatureContract>>(bibleFeatures)
+                : TypedResults.NotFound();
+        }
+        catch (Exception e)
+        {
+            return TypedResults.Problem(e.ToString());
+        }
+    }
+
+    internal async Task<IResult> CreateBibleFeatureAsync(
+        [FromBody] BibleFeatureContract bibleFeatureContract,
+        IBibleFeatureService bibleFeatureService)
+    {
+        try
+        {
+            BibleFeatureContract bibleFeature = await bibleFeatureService.CreateAsync(bibleFeatureContract);
+
+            return TypedResults.Created($"bibles/features/{bibleFeature.Id})", bibleFeature);
+        }
+        catch (Exception e)
+        {
+            return TypedResults.Problem(e.ToString());
+        }
+    }
+
+    #endregion Handlers
 
     public void DefineServices(IServiceCollection services)
     {
-
+        services.AddSingleton<IBibleFeatureService, BibleFeatureService>();
+        services.AddSingleton<IBibleFeatureRepository, BibleFeatureFileRepository>();
+        services.AddSingleton<IBibleFeatureMapper, BibleFeatureMapper>();
     }
 }
