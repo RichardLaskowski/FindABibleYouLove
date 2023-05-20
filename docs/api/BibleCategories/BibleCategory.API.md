@@ -19,7 +19,7 @@ POST /bibles/categories
 ### Create Bible Category Response
 
 ```javascript
-201 Created 
+201 Created
 ```
 
 ```javascript
@@ -45,7 +45,7 @@ GET /bible/category/{{id}}
 ### Get Bible Category Repsonse
 
 ```javascript
-200 Ok 
+200 Ok
 ```
 
 ```javascript
